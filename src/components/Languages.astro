@@ -1,0 +1,47 @@
+---
+import type { Translations } from '../i18n';
+
+interface Props {
+    t: Translations['languages'];
+}
+
+const { t } = Astro.props;
+---
+
+<article class="bento-card">
+    <h2 class="section-title mb-4">
+        <i class="fas fa-language text-brand me-2"></i>{t.title}
+    </h2>
+
+    <div class="language-list">
+        {t.items.map(item => (
+            <div class="lang-item">
+                <span class="lang-name">
+                    <i class="fas fa-circle-check text-brand me-2"></i>{item.name}
+                </span>
+                <span class="lang-level">{item.level}</span>
+            </div>
+        ))}
+    </div>
+</article>
+
+<style>
+    .language-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .lang-name {
+        color: var(--id-text-primary);
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .lang-level {
+        color: var(--id-color-brand);
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+</style>

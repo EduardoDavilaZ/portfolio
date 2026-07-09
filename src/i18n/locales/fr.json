@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "homeTitle": "Eduardo | Accueil",
+    "aboutTitle": "Eduardo | À propos"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Me contacter",
+    "themeToggle": "Changer le thème",
+    "languages": {
+      "es": "Español",
+      "ca": "Català",
+      "en": "English",
+      "fr": "Français"
+    }
+  },
+  "contact": {
+    "title": "Me contacter",
+    "subtitle": "Vous avez un projet en tête ou souhaitez en savoir plus sur mon travail ? Contactez-moi via l'un de ces moyens.",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "downloadCv": "Télécharger le CV",
+    "close": "Fermer"
+  },
+  "footer": {
+    "copyright": "© 2026 Eduardo Davila Zevallos. All rights reserved.",
+    "email": "Envoyer un e-mail"
+  },
+  "hero": {
+    "badge": "Disponible pour travailler",
+    "greeting": "Bonjour, je suis",
+    "name": "Eduardo",
+    "role": "Développeur Full Stack",
+    "description": "Diplômé en Développement d'Applications Web. Je développe des solutions web centrées sur la gestion des processus, l'analyse de données et l'automatisation. Je me spécialise dans des technologies comme PHP, Laravel et MySQL, avec un intérêt particulier pour le backend, les bases de données et l'intégration d'API. J'aime construire des applications robustes, optimiser les flux de travail et transformer les données en informations utiles pour la prise de décision."
+  },
+  "projects": {
+    "heading": "Expérience technique et produit",
+    "subtitle": "Solutions logicielles conçues pour évoluer, optimiser les processus et transformer les données en décisions stratégiques.",
+    "viewCode": "Voir le code",
+    "private": "Privé",
+    "privateTooltip": "Code privé pour confidentialité du projet",
+    "items": [
+      {
+        "title": "Système de Gestion des Remplacements",
+        "description": "J'ai développé une solution robuste pour automatiser la logistique enseignante et la couverture des absences dans des environnements éducatifs complexes. Le système élimine les frictions administratives en centralisant la communication entre la direction et le corps enseignant, garantissant que chaque incident soit résolu de manière intelligente et en temps réel.",
+        "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/substitute-management",
+        "isPrivate": false
+      },
+      {
+        "title": "LeafConection",
+        "description": "Plateforme éducative de durabilité centrée sur l'expérience utilisateur. J'ai implémenté des mécaniques de gamification pour encourager l'engagement environnemental.",
+        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
+        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
+        "isPrivate": false
+      },
+      {
+        "title": "Analytiques de Réservations (OTA)",
+        "description": "Outil d'audit financier conçu pour optimiser la conversion hôtelière grâce au contrôle des métriques Price-Match et au suivi des abandons de panier.",
+        "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "title": "Module Environnemental (Intégration IA)",
+        "description": "Cette plateforme transforme la gestion hôtelière grâce à l'IA, centralisant l'analyse des approvisionnements et des déchets pour optimiser l'efficacité énergétique. Son moteur extrait des données critiques des factures et génère des rapports comparatifs interannuels, normalisés par chambre ou séjour, pour détecter les inefficacités via des graphiques dynamiques. En essence, c'est un outil d'Intelligence des Données qui transforme les factures en décisions stratégiques d'économie et de durabilité.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Postman", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      }
+    ]
+  },
+  "profile": {
+    "title": "À propos",
+    "paragraphs": [
+      "Je suis développeur d'applications web avec un intérêt particulier pour le développement backend, les bases de données et la création de solutions à valeur ajoutée. J'aime écrire du code propre et maintenable, en appliquant les bonnes pratiques de développement, les principes SOLID et DRY, ainsi que des modèles de conception qui facilitent l'évolutivité et l'évolution des projets.",
+      "J'apprécie de participer à toutes les phases du développement, de l'analyse des exigences à l'implémentation et à l'amélioration continue d'une application. Je m'intéresse particulièrement à l'exploration de nouvelles technologies, comme l'intelligence artificielle, l'automatisation et l'intégration d'API, en combinant cette curiosité pour l'innovation avec l'importance de maintenir une architecture claire, efficace et orientée vers les besoins de l'utilisateur."
+    ]
+  },
+  "experience": {
+    "title": "Parcours",
+    "items": [
+      {
+        "date": "fév. 2026 — juin 2026",
+        "title": "Stage Professionnel",
+        "company": "THB Hotels",
+        "description": "Participation au développement et à la maintenance d'applications web internes utilisant Laravel, PHP et MySQL. Apprentissage des flux de travail professionnels, du contrôle de version avec Git, des méthodologies agiles et du travail collaboratif en équipe. Collaboration sur des projets liés à l'analyse de données, l'automatisation des processus et l'intégration d'API et d'intelligence artificielle."
+      },
+      {
+        "date": "sept. 2024 — juin 2026",
+        "title": "Technicien Supérieur en Développement d'Applications Web",
+        "company": "Escuela Virgen de Guadalupe",
+        "description": "Formation spécialisée en développement web full stack, bases de données et architecture d'applications. Développement de projets appliquant le modèle MVC, conception et administration de bases de données relationnelles, programmation orientée objet et méthodologies agiles. Participation à des projets collaboratifs axés sur la résolution de problèmes réels via des solutions web."
+      },
+      {
+        "date": "oct. 2025 — juin 2026",
+        "title": "Certificat de Professionnalité : Conception et Publication de Pages Web",
+        "company": "I.E.S. Bárbara de Braganza",
+        "description": "Formation orientée vers la conception et le développement de sites web accessibles, optimisés et centrés sur l'utilisateur. Application des principes UX/UI, design responsive, référencement SEO, accessibilité web et bonnes pratiques de publication et de maintenance de projets numériques."
+      }
+    ]
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "groups": {
+      "backend": "Backend & Core",
+      "frontend": "Frontend & UI",
+      "databases": "Bases de données",
+      "workflow": "Méthodologies & Workflow"
+    }
+  },
+  "languages": {
+    "title": "Langues",
+    "items": [
+      { "name": "Espagnol", "level": "Natif" },
+      { "name": "Anglais", "level": "Courant" }
+    ]
+  }
+}

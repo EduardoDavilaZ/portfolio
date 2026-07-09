@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Projects from '../components/Projects.astro';
+import { getTranslations, normalizeLocale } from '../i18n';
+
+const locale = normalizeLocale(Astro.currentLocale);
+const t = getTranslations(locale);
+---
+
+<Layout title={t.meta.homeTitle} locale={locale}>
+    <Navbar locale={locale} t={t} />
+
+    <main class="main-wrapper container py-5 position-relative">
+        <div id="bg-ambient-particles" class="position-absolute top-0 start-0 w-100 h-100"></div>
+
+        <div class="content-container position-relative">
+            <section class="portfolio-section">
+                <Hero t={t.hero} />
+            </section>
+
+            <Projects t={t.projects} />
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .content-container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .portfolio-section,
+    .project-section {
+        pointer-events: auto;
+    }
+</style>

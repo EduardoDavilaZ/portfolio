@@ -1,0 +1,262 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { Image } from 'astro:assets';
+import type { Locale, Translations } from '../i18n';
+import { getLocaleLabel, getPageSlug } from '../i18n';
+
+import flagEs from '../assets/img/flags/es.png';
+import flagCa from '../assets/img/flags/ca.png';
+import flagEn from '../assets/img/flags/en.png';
+import flagFr from '../assets/img/flags/fr.png';
+
+interface Props {
+    locale: Locale;
+    t: Translations;
+}
+
+const { locale, t } = Astro.props;
+const pageSlug = getPageSlug(Astro.url.pathname);
+
+const localeLinks: { code: Locale; flag: ImageMetadata; label: string }[] = [
+    { code: 'es', flag: flagEs, label: t.nav.languages.es },
+    { code: 'ca', flag: flagCa, label: t.nav.languages.ca },
+    { code: 'en', flag: flagEn, label: t.nav.languages.en },
+    { code: 'fr', flag: flagFr, label: t.nav.languages.fr }
+];
+
+// Generamos las URLs base para comparar
+const homeUrl = getRelativeLocaleUrl(locale);
+const aboutUrl = getRelativeLocaleUrl(locale, 'about-me');
+
+// Comparamos la ruta actual con las URLs generadas
+const isHomeActive = Astro.url.pathname === homeUrl || Astro.url.pathname === homeUrl + '/';
+const isAboutActive = Astro.url.pathname === aboutUrl || Astro.url.pathname === aboutUrl + '/';
+---
+
+<nav class="navbar navbar-expand-lg py-3 custom-navbar">
+    <div class="container">
+        <a class="navbar-brand-custom" href={getRelativeLocaleUrl(locale)}>eduardodavila<span>.es</span></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class={`nav-link-custom ${isHomeActive ? 'active' : ''}`} href={homeUrl}>
+                        {t.nav.home}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class={`nav-link-custom ${isAboutActive ? 'active' : ''}`} href={aboutUrl}>
+                        {t.nav.about}
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown ms-lg-3">
+                    <button class="btn-lang dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-globe me-2"></i> {getLocaleLabel(locale)}
+                    </button>
+                    <ul class="dropdown-menu dropdown-custom">
+                        {localeLinks.map(({ code, flag, label }) => (
+                            <li>
+                                <a
+                                    class={`dropdown-item d-flex align-items-center${code === locale ? ' active' : ''}`}
+                                    href={getRelativeLocaleUrl(code, pageSlug || undefined)}
+                                >
+                                    <Image src={flag} alt={label} class="flag-img me-2" width={24} height={24} />
+                                    {label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </li>
+
+                <li class="nav-item ms-lg-3 my-2 my-lg-0">
+                    <button class="btn-theme-toggle" title={t.nav.themeToggle}>
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </li>
+
+                <li class="nav-item">
+                    <button class="btn-contact ms-lg-3" data-bs-toggle="modal" data-bs-target="#contactModal">
+                        {t.nav.contact}
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<style>
+    .custom-navbar {
+        background-color: var(--id-bg-superficie);
+        border-bottom: 1px solid var(--id-border-color);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+
+        .navbar-brand-custom {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--id-text-primary);
+            text-decoration: none;
+
+            span { color: var(--id-color-brand); }
+        }
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+    }
+
+    .nav-link-custom {
+        color: var(--id-text-secondary);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover { 
+            color: var(--id-color-brand); 
+        }
+
+        &.active {
+            color: var(--id-color-brand);
+            border-bottom: 2px solid var(--id-color-brand);
+        }
+    }
+
+    .btn-lang {
+        background: var(--id-bg-superficie);
+        border: 1px solid var(--id-border-color);
+        color: var(--id-text-primary);
+        padding: 0.4rem 0.8rem;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all .25s ease;
+
+        &:hover {
+            border-color: var(--id-color-brand);
+            color: var(--id-color-brand);
+            background: var(--id-hover-brand-bg);
+        }
+    }
+
+    .btn-theme-toggle {
+        background: none;
+        border: 1px solid var(--id-border-color);
+        color: var(--id-color-brand);
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        &:hover { 
+            background: var(--id-hover-brand-bg); 
+        }
+    }
+
+    .btn-contact {
+        background-color: var(--id-color-brand);
+        color: var(--id-btn-contact-text);
+        border: none;
+        padding: 0.5rem 1.2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            background-color: var(--id-color-brand-hover);
+        }
+    }
+
+    .dropdown-custom {
+        background-color: var(--id-bg-superficie);
+        border: 1px solid var(--id-border-color);
+        margin-top: 0.5rem;
+
+        max-height: 0;
+        overflow: hidden;
+        transform: translateY(-10px);
+        display: block !important;
+    
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        &.show {
+            max-height: 300px; 
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        .dropdown-item {
+            color: var(--id-text-primary);
+            transition: all 0.2s ease;
+
+            &:hover, &:focus, &.active {
+                background-color: var(--id-hover-brand-bg);
+                color: var(--id-color-brand);
+            }
+        }
+    }
+
+    .flag-img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        border-radius: 50%;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 991.98px) {
+        .navbar-nav {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .nav-item { 
+            width: 100%; 
+        }
+
+        .nav-link-custom, .btn-contact, .btn-lang, .btn-theme-toggle {
+            width: 100%;
+            display: block;
+            margin-top: 0.5rem;
+        }
+    }
+</style>
+
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.custom-navbar');
+
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                navbar.classList.add('navbar-hidden');
+            } else {
+                navbar.classList.remove('navbar-hidden');
+            }
+            
+            if (scrollTop === 0) {
+                navbar.classList.remove('navbar-hidden');
+            }
+
+            lastScrollTop = scrollTop;
+        });
+    }
+</script>

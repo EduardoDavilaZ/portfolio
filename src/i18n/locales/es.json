@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "homeTitle": "Eduardo | Inicio",
+    "aboutTitle": "Eduardo | Sobre Mí"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "contact": "Contáctame",
+    "themeToggle": "Cambiar tema",
+    "languages": {
+      "es": "Español",
+      "ca": "Català",
+      "en": "English",
+      "fr": "Français"
+    }
+  },
+  "contact": {
+    "title": "Contáctame",
+    "subtitle": "¿Tienes un proyecto en mente o quieres saber más sobre mi trabajo? Escríbeme por cualquiera de estos medios.",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "downloadCv": "Descargar currículum",
+    "close": "Cerrar"
+  },
+  "footer": {
+    "copyright": "© 2026 Eduardo Davila Zevallos. All rights reserved.",
+    "email": "Enviar correo"
+  },
+  "hero": {
+    "badge": "Disponible para trabajar",
+    "greeting": "Hola, soy",
+    "name": "Eduardo",
+    "role": "Desarrollador Full Stack",
+    "description": "Graduado en Desarrollo de Aplicaciones Web. Desarrollo soluciones web centradas en la gestión de procesos, el análisis de datos y la automatización. Me especializo en tecnologías como PHP, Laravel y MySQL, con especial interés en el backend, las bases de datos y la integración de APIs. Disfruto construyendo aplicaciones robustas, optimizando flujos de trabajo y convirtiendo datos en información útil para la toma de decisiones."
+  },
+  "projects": {
+    "heading": "Experiencia técnica y producto",
+    "subtitle": "Soluciones de software diseñadas para escalar, optimizar procesos y transformar datos en decisiones estratégicas.",
+    "viewCode": "Ver código",
+    "private": "Privado",
+    "privateTooltip": "Código privado por confidencialidad del proyecto",
+    "items": [
+      {
+        "title": "Sistema de Gestión de Guardias",
+        "description": "Desarrollé una solución robusta para automatizar la logística docente y la cobertura de ausencias en entornos educativos complejos. El sistema elimina la fricción administrativa al centralizar la comunicación entre la dirección y el profesorado, asegurando que cada incidencia sea resuelta de forma inteligente y en tiempo real.",
+        "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/substitute-management",
+        "isPrivate": false
+      },
+      {
+        "title": "LeafConection",
+        "description": "Plataforma educativa de sostenibilidad centrada en la experiencia de usuario. Implementé mecánicas de gamificación para fomentar el compromiso ambiental.",
+        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
+        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
+        "isPrivate": false
+      },
+      {
+        "title": "Analíticas de Reservas (OTA)",
+        "description": "Herramienta de auditoría financiera diseñada para optimizar la conversión hotelera mediante el control de métricas de Price-Match y el seguimiento de abandonos de carrito.",
+        "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "title": "Módulo Medioambiental (IA Integration)",
+        "description": "Esta plataforma transforma la gestión hotelera mediante IA, centralizando el análisis de suministros y residuos para optimizar la eficiencia energética. Su motor permite extraer datos críticos de facturas y generar informes comparativos interanuales, normalizados por habitación o estancia, para detectar ineficiencias mediante gráficos dinámicos. Es, en esencia, una herramienta de Inteligencia de Datos que convierte facturas en decisiones estratégicas de ahorro y sostenibilidad.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Postman", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      }
+    ]
+  },
+  "profile": {
+    "title": "Sobre Mí",
+    "paragraphs": [
+      "Soy desarrollador de aplicaciones web con especial interés en el desarrollo backend, las bases de datos y la creación de soluciones que aporten valor real. Me gusta escribir código limpio y mantenible, aplicando buenas prácticas de desarrollo, principios como SOLID y DRY, así como patrones de diseño que faciliten la escalabilidad y evolución de los proyectos.",
+      "Disfruto participando en todas las fases del desarrollo, desde el análisis de requisitos hasta la implementación y mejora continua de una aplicación. Me interesa especialmente explorar nuevas tecnologías, como la inteligencia artificial, la automatización y la integración de APIs, combinando esa curiosidad por la innovación con la importancia de mantener una arquitectura clara, eficiente y orientada a las necesidades del usuario."
+    ]
+  },
+  "experience": {
+    "title": "Trayectoria",
+    "items": [
+      {
+        "date": "feb. 2026 — jun. 2026",
+        "title": "Prácticas Profesionales",
+        "company": "THB Hotels",
+        "description": "Participación en el desarrollo y mantenimiento de aplicaciones web internas utilizando Laravel, PHP y MySQL. Aprendizaje de flujos de trabajo profesionales, control de versiones con Git, metodologías ágiles y trabajo colaborativo en equipo. Colaboración en proyectos relacionados con análisis de datos, automatización de procesos e integración de APIs e inteligencia artificial."
+      },
+      {
+        "date": "sept. 2024 — jun. 2026",
+        "title": "Técnico Superior en Desarrollo de Aplicaciones Web",
+        "company": "Escuela Virgen de Guadalupe",
+        "description": "Formación especializada en desarrollo web full stack, bases de datos y arquitectura de aplicaciones. Desarrollo de proyectos aplicando el patrón MVC, diseño y administración de bases de datos relacionales, programación orientada a objetos y metodologías ágiles. Participación en proyectos colaborativos enfocados en la resolución de problemas reales mediante soluciones web."
+      },
+      {
+        "date": "oct. 2025 — jun. 2026",
+        "title": "Certificado de Profesionalidad: Confección y Publicación de Páginas Web",
+        "company": "I.E.S. Bárbara de Braganza",
+        "description": "Formación orientada al diseño y desarrollo de sitios web accesibles, optimizados y centrados en el usuario. Aplicación de principios de UX/UI, diseño responsive, posicionamiento SEO, accesibilidad web y buenas prácticas de publicación y mantenimiento de proyectos digitales."
+      }
+    ]
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "groups": {
+      "backend": "Backend & Core",
+      "frontend": "Frontend & UI",
+      "databases": "Bases de datos",
+      "workflow": "Metodologías & Workflow"
+    }
+  },
+  "languages": {
+    "title": "Idiomas",
+    "items": [
+      { "name": "Español", "level": "Nativo" },
+      { "name": "Inglés", "level": "Fluido" }
+    ]
+  }
+}

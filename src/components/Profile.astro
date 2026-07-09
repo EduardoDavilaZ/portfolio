@@ -1,0 +1,25 @@
+---
+import type { Translations } from '../i18n';
+
+interface Props {
+    t: Translations['profile'];
+}
+
+const { t } = Astro.props;
+---
+
+<article class="bento-card">
+    <h2 class="section-title mb-3">
+        <i class="fas fa-regular fa-user text-brand me-2"></i>{t.title}
+    </h2>
+    {t.paragraphs.map(paragraph => (
+        <p class="profile-text">{paragraph}</p>
+    ))}
+</article>
+
+<style>
+    .profile-text {
+        color: var(--id-text-secondary);
+        line-height: 1.7;
+    }
+</style>

@@ -1,0 +1,78 @@
+---
+import type { Translations } from '../i18n';
+
+interface Props {
+    t: Translations['experience'];
+}
+
+const { t } = Astro.props;
+---
+
+<article class="bento-card">
+    <h2 class="section-title mb-4">
+        <i class="fas fa-history text-brand me-2"></i>{t.title}
+    </h2>
+    <div class="timeline">
+        {t.items.map(item => (
+            <div class="timeline-item">
+                <span class="timeline-date">{item.date}</span>
+                <h3 class="timeline-title my-2">{item.title}</h3>
+                <h4 class="company-name">{item.company}</h4>
+                <p class="desc">{item.description}</p>
+            </div>
+        ))}
+    </div>
+</article>
+
+<style>
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 1rem;
+    }
+
+    .timeline-item {
+        border-left: 2px solid var(--id-border-color);
+        padding: 1rem 1rem 1rem 1.5rem;
+        position: relative;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -7px;
+        top: 24px;
+        width: 12px;
+        height: 12px;
+        background: var(--id-color-brand);
+        border-radius: 50%;
+        box-shadow: 0 0 8px var(--id-color-brand);
+    }
+
+    .timeline-date {
+        color: var(--id-color-brand);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .timeline-title {
+        color: var(--id-text-primary);
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .company-name {
+        color: var(--id-text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .desc {
+        font-size: 0.9rem;
+        color: var(--id-text-secondary);
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+</style>

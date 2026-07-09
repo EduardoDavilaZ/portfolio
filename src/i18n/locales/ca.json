@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "homeTitle": "Eduardo | Inici",
+    "aboutTitle": "Eduardo | Sobre mi"
+  },
+  "nav": {
+    "home": "Inici",
+    "about": "Sobre mi",
+    "contact": "Contacta'm",
+    "themeToggle": "Canviar tema",
+    "languages": {
+      "es": "Español",
+      "ca": "Català",
+      "en": "English",
+      "fr": "Français"
+    }
+  },
+  "contact": {
+    "title": "Contacta'm",
+    "subtitle": "Tens un projecte en ment o vols saber més sobre la meva feina? Escriu-me per qualsevol d'aquests mitjans.",
+    "email": "Correu",
+    "phone": "Telèfon",
+    "location": "Ubicació",
+    "downloadCv": "Descarregar currículum",
+    "close": "Tancar"
+  },
+  "footer": {
+    "copyright": "© 2026 Eduardo Davila Zevallos. All rights reserved.",
+    "email": "Enviar correu"
+  },
+  "hero": {
+    "badge": "Disponible per treballar",
+    "greeting": "Hola, sóc",
+    "name": "Eduardo",
+    "role": "Desenvolupador Full Stack",
+    "description": "Graduat en Desenvolupament d'Aplicacions Web. Desenvolupo solucions web centrades en la gestió de processos, l'anàlisi de dades i l'automatització. M'especialitzo en tecnologies com PHP, Laravel i MySQL, amb especial interès en el backend, les bases de dades i la integració d'APIs. M'agrada construir aplicacions robustes, optimitzar fluxos de treball i convertir dades en informació útil per a la presa de decisions."
+  },
+  "projects": {
+    "heading": "Experiència tècnica i producte",
+    "subtitle": "Solucions de programari dissenyades per escalar, optimitzar processos i transformar dades en decisions estratègiques.",
+    "viewCode": "Veure codi",
+    "private": "Privat",
+    "privateTooltip": "Codi privat per confidencialitat del projecte",
+    "items": [
+      {
+        "title": "Sistema de Gestió de Guàrdies",
+        "description": "Vaig desenvolupar una solució robusta per automatitzar la logística docent i la cobertura d'absències en entorns educatius complexos. El sistema elimina la fricció administrativa en centralitzar la comunicació entre la direcció i el professorat, assegurant que cada incidència es resolgui de forma intel·ligent i en temps real.",
+        "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/substitute-management",
+        "isPrivate": false
+      },
+      {
+        "title": "LeafConection",
+        "description": "Plataforma educativa de sostenibilitat centrada en l'experiència d'usuari. Vaig implementar mecàniques de gamificació per fomentar el compromís ambiental.",
+        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
+        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
+        "isPrivate": false
+      },
+      {
+        "title": "Analítiques de Reserves (OTA)",
+        "description": "Eina d'auditoria financera dissenyada per optimitzar la conversió hotelera mitjançant el control de mètriques de Price-Match i el seguiment d'abandonaments de cistella.",
+        "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "title": "Mòdul Mediambiental (Integració IA)",
+        "description": "Aquesta plataforma transforma la gestió hotelera mitjançant IA, centralitzant l'anàlisi de subministraments i residus per optimitzar l'eficiència energètica. El seu motor permet extreure dades crítiques de factures i generar informes comparatius interanuals, normalitzats per habitació o estada, per detectar ineficiències mitjançant gràfics dinàmics.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Postman", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      }
+    ]
+  },
+  "profile": {
+    "title": "Sobre mi",
+    "paragraphs": [
+      "Sóc desenvolupador d'aplicacions web amb especial interès en el desenvolupament backend, les bases de dades i la creació de solucions que aportin valor real. M'agrada escriure codi net i mantenible, aplicant bones pràctiques de desenvolupament, principis com SOLID i DRY, així com patrons de disseny que facilitin l'escalabilitat i l'evolució dels projectes.",
+      "Gaudeixo participant en totes les fases del desenvolupament, des de l'anàlisi de requisits fins a la implementació i millora contínua d'una aplicació. M'interessa especialment explorar noves tecnologies, com la intel·ligència artificial, l'automatització i la integració d'APIs, combinant aquesta curiositat per la innovació amb la importància de mantenir una arquitectura clara, eficient i orientada a les necessitats de l'usuari."
+    ]
+  },
+  "experience": {
+    "title": "Trajectòria",
+    "items": [
+      {
+        "date": "feb. 2026 — jun. 2026",
+        "title": "Pràctiques Professionals",
+        "company": "THB Hotels",
+        "description": "Participació en el desenvolupament i manteniment d'aplicacions web internes utilitzant Laravel, PHP i MySQL. Aprenentatge de fluxos de treball professionals, control de versions amb Git, metodologies àgils i treball col·laboratiu en equip."
+      },
+      {
+        "date": "set. 2024 — jun. 2026",
+        "title": "Tècnic Superior en Desenvolupament d'Aplicacions Web",
+        "company": "Escola Verge de Guadalupe",
+        "description": "Formació especialitzada en desenvolupament web full stack, bases de dades i arquitectura d'aplicacions. Desenvolupament de projectes aplicant el patró MVC, disseny i administració de bases de dades relacionals i programació orientada a objectes."
+      },
+      {
+        "date": "oct. 2025 — jun. 2026",
+        "title": "Certificat de Professionalitat: Confecció i Publicació de Pàgines Web",
+        "company": "I.E.S. Bárbara de Braganza",
+        "description": "Formació orientada al disseny i desenvolupament de llocs web accessibles, optimitzats i centrats en l'usuari. Aplicació de principis UX/UI, disseny responsive, posicionament SEO i accessibilitat web."
+      }
+    ]
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "groups": {
+      "backend": "Backend & Core",
+      "frontend": "Frontend & UI",
+      "databases": "Bases de dades",
+      "workflow": "Metodologies & Workflow"
+    }
+  },
+  "languages": {
+    "title": "Idiomes",
+    "items": [
+      { "name": "Espanyol", "level": "Natiu" },
+      { "name": "Anglès", "level": "Fluid" }
+    ]
+  }
+}

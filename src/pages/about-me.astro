@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Experience from '../components/Experience.astro';
+import TechStack from '../components/TechStack.astro';
+import Profile from '../components/Profile.astro';
+import Languages from '../components/Languages.astro';
+import { getTranslations, normalizeLocale } from '../i18n';
+
+const locale = normalizeLocale(Astro.currentLocale);
+const t = getTranslations(locale);
+---
+
+<Layout title={t.meta.aboutTitle} locale={locale}>
+    <Navbar locale={locale} t={t} />
+
+    <main class="main-wrapper container py-5 position-relative">
+        <div id="bg-ambient-particles" class="position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="content-container position-relative">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <Profile t={t.profile} />
+                        </div>
+                        <div class="col-12">
+                            <Experience t={t.experience} />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <TechStack t={t.techStack} />
+                        </div>
+                        <div class="col-12">
+                            <Languages t={t.languages} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .content-container {
+        z-index: 1;
+    }
+</style>

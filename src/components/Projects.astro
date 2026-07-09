@@ -1,0 +1,78 @@
+---
+import type { Translations } from '../i18n';
+
+interface Props {
+    t: Translations['projects'];
+}
+
+const { t } = Astro.props;
+
+const layoutClasses = [
+    'col-12 col-md-7 col-lg-8',
+    'col-12 col-md-5 col-lg-4',
+    'col-12 col-md-5 col-lg-4',
+    'col-12 col-md-7 col-lg-8'
+];
+---
+
+<section class="project-section py-5">
+    <div class="project-section-heading reveal mb-5">
+        <h2 class="section-heading">{t.heading}</h2>
+        <p class="section-subtitle">{t.subtitle}</p>
+    </div>
+
+    <div class="row g-4">
+        {t.items.map((project, index) => (
+            <div class={layoutClasses[index]}>
+                <article class="project-card h-100 d-flex flex-column">
+                    <h3>{project.title}</h3>
+                    <p class="text-secondary">{project.description}</p>
+                    <div class="mt-auto pt-3 border-top border-secondary-subtle">
+                        <div class="tags mb-3">
+                            {project.tags.map(tag => (
+                                <span class="project-tag">{tag}</span>
+                            ))}
+                        </div>
+
+                        <div class="project-actions">
+                            {project.isPrivate ? (
+                                <>
+                                    <span class="private-badge" title={t.privateTooltip}>
+                                        <i class="bi bi-lock-fill"></i>
+                                        {t.private}
+                                    </span>
+                                    <button
+                                        class="btn btn-outline-theme btn-sm private-btn"
+                                        disabled
+                                        title={t.privateTooltip}
+                                    >
+                                        <i class="bi bi-github"></i>
+                                        {t.viewCode}
+                                    </button>
+                                </>
+                            ) : (
+                                <a
+                                    href={project.githubUrl!}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn btn-outline-theme btn-sm"
+                                >
+                                    <i class="bi bi-github"></i>
+                                    {t.viewCode}
+                                </a>
+                            )}
+                        </div>
+                    </div>
+                </article>
+            </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    .project-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+</style>

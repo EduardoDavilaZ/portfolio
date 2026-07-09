@@ -1,0 +1,105 @@
+---
+import type { Translations } from '../i18n';
+
+interface Props {
+    t: Translations['hero'];
+}
+
+const { t } = Astro.props;
+---
+
+<section class="hero-container">
+    <div class="row align-items-center w-100 m-0">
+        <div class="col-md-6 hero-text-block p-2">
+            <span class="badge-status">{t.badge}</span>
+            <h1 class="hero-title">{t.greeting} <span>{t.name}</span></h1>
+            <h2 class="hero-subtitle">{t.role}</h2>
+            <p class="hero-description">{t.description}</p>
+        </div>
+
+        <div class="col-md-6 hero-canvas-block p-2">
+            <div class="glass-canvas">
+                <div id="logo-particles">
+                    <img src="/icons/code.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #logo-particles img {
+        display: none !important;
+    }
+
+    .hero-container {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .badge-status {
+        display: inline-block;
+        background-color: color-mix(in srgb, var(--id-color-brand) 10%, transparent);
+        color: var(--id-color-brand);
+        border: 1px solid var(--id-border-color);
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--id-text-primary);
+        margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+        color: var(--id-color-brand);
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        color: var(--id-text-secondary);
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        color: var(--id-text-secondary);
+        line-height: 1.7;
+    }
+
+    .hero-canvas-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 400px;
+    }
+
+    .glass-canvas {
+        width: 100%;
+        height: 100%;
+        background: var(--id-bg-superficie);
+        border: 1px solid var(--id-border-color);
+        border-radius: 16px;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        position: relative;
+        overflow: hidden;
+    }
+
+    #logo-particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+</style>

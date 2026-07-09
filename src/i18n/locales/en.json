@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "homeTitle": "Eduardo | Home",
+    "aboutTitle": "Eduardo | About Me"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "contact": "Contact me",
+    "themeToggle": "Toggle theme",
+    "languages": {
+      "es": "Español",
+      "ca": "Català",
+      "en": "English",
+      "fr": "Français"
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "subtitle": "Have a project in mind or want to know more about my work? Reach out through any of these channels.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "downloadCv": "Download CV",
+    "close": "Close"
+  },
+  "footer": {
+    "copyright": "© 2026 Eduardo Davila Zevallos. All rights reserved.",
+    "email": "Send email"
+  },
+  "hero": {
+    "badge": "Available for work",
+    "greeting": "Hi, I'm",
+    "name": "Eduardo",
+    "role": "Full Stack Developer",
+    "description": "Graduate in Web Application Development. I build web solutions focused on process management, data analysis, and automation. I specialize in technologies such as PHP, Laravel, and MySQL, with a particular interest in backend development, databases, and API integration. I enjoy building robust applications, optimizing workflows, and turning data into actionable insights for decision-making."
+  },
+  "projects": {
+    "heading": "Technical & product experience",
+    "subtitle": "Software solutions designed to scale, optimize processes, and turn data into strategic decisions.",
+    "viewCode": "View code",
+    "private": "Private",
+    "privateTooltip": "Private code due to project confidentiality",
+    "items": [
+      {
+        "title": "Substitute Management System",
+        "description": "I developed a robust solution to automate teacher logistics and absence coverage in complex educational environments. The system removes administrative friction by centralizing communication between management and staff, ensuring every incident is resolved intelligently and in real time.",
+        "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/substitute-management",
+        "isPrivate": false
+      },
+      {
+        "title": "LeafConection",
+        "description": "Educational sustainability platform focused on user experience. I implemented gamification mechanics to encourage environmental engagement.",
+        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
+        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
+        "isPrivate": false
+      },
+      {
+        "title": "Booking Analytics (OTA)",
+        "description": "Financial audit tool designed to optimize hotel conversion through Price-Match metrics control and cart abandonment tracking.",
+        "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "title": "Environmental Module (AI Integration)",
+        "description": "This platform transforms hotel management through AI, centralizing supply and waste analysis to optimize energy efficiency. Its engine extracts critical data from invoices and generates year-over-year comparative reports, normalized by room or stay, to detect inefficiencies through dynamic charts. In essence, it is a Data Intelligence tool that turns invoices into strategic savings and sustainability decisions.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Postman", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      }
+    ]
+  },
+  "profile": {
+    "title": "About Me",
+    "paragraphs": [
+      "I am a web application developer with a special interest in backend development, databases, and creating solutions that deliver real value. I enjoy writing clean, maintainable code, applying best development practices, principles such as SOLID and DRY, and design patterns that facilitate scalability and project evolution.",
+      "I enjoy participating in all development phases, from requirements analysis to implementation and continuous improvement of an application. I am especially interested in exploring new technologies such as artificial intelligence, automation, and API integration, combining that curiosity for innovation with the importance of maintaining a clear, efficient architecture oriented to user needs."
+    ]
+  },
+  "experience": {
+    "title": "Career",
+    "items": [
+      {
+        "date": "Feb 2026 — Jun 2026",
+        "title": "Professional Internship",
+        "company": "THB Hotels",
+        "description": "Participation in the development and maintenance of internal web applications using Laravel, PHP, and MySQL. Learning professional workflows, version control with Git, agile methodologies, and collaborative teamwork. Collaboration on projects related to data analysis, process automation, and API and artificial intelligence integration."
+      },
+      {
+        "date": "Sep 2024 — Jun 2026",
+        "title": "Higher Technician in Web Application Development",
+        "company": "Escuela Virgen de Guadalupe",
+        "description": "Specialized training in full stack web development, databases, and application architecture. Project development applying the MVC pattern, design and administration of relational databases, object-oriented programming, and agile methodologies. Participation in collaborative projects focused on solving real problems through web solutions."
+      },
+      {
+        "date": "Oct 2025 — Jun 2026",
+        "title": "Professional Certificate: Web Page Design and Publishing",
+        "company": "I.E.S. Bárbara de Braganza",
+        "description": "Training focused on designing and developing accessible, optimized, user-centered websites. Application of UX/UI principles, responsive design, SEO positioning, web accessibility, and best practices for publishing and maintaining digital projects."
+      }
+    ]
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "groups": {
+      "backend": "Backend & Core",
+      "frontend": "Frontend & UI",
+      "databases": "Databases",
+      "workflow": "Methodologies & Workflow"
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "items": [
+      { "name": "Spanish", "level": "Native" },
+      { "name": "English", "level": "Fluent" }
+    ]
+  }
+}
