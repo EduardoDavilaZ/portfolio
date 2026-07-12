@@ -1,11 +1,13 @@
 {
   "meta": {
     "homeTitle": "Eduardo | Accueil",
-    "aboutTitle": "Eduardo | À propos"
+    "aboutTitle": "Eduardo | À propos",
+    "projectsTitle": "Eduardo | Projets"
   },
   "nav": {
     "home": "Accueil",
     "about": "À propos",
+    "projects": "Projets",
     "contact": "Me contacter",
     "themeToggle": "Changer le thème",
     "languages": {
@@ -35,7 +37,7 @@
     "role": "Développeur Full Stack",
     "description": "Diplômé en Développement d'Applications Web. Je développe des solutions web centrées sur la gestion des processus, l'analyse de données et l'automatisation. Je me spécialise dans des technologies comme PHP, Laravel et MySQL, avec un intérêt particulier pour le backend, les bases de données et l'intégration d'API. J'aime construire des applications robustes, optimiser les flux de travail et transformer les données en informations utiles pour la prise de décision."
   },
-  "projects": {
+  "featuredProjects": {
     "heading": "Expérience technique et produit",
     "subtitle": "Solutions logicielles conçues pour évoluer, optimiser les processus et transformer les données en décisions stratégiques.",
     "viewCode": "Voir le code",
@@ -116,6 +118,76 @@
     "items": [
       { "name": "Espagnol", "level": "Natif" },
       { "name": "Anglais", "level": "Courant" }
+    ]
+  },
+  "projects": {
+    "badge": "Portfolio",
+    "heading": "Projets développés",
+    "subtitle": "Une sélection d'applications, d'outils et d'expériences reflétant mon approche du backend, des données et de l'expérience utilisateur.",
+    "viewCode": "Voir le code",
+    "viewDocs": "Voir la documentation",
+    "preview": "Aperçu",
+    "downloadPdf": "Télécharger le PDF",
+    "close": "Fermer",
+    "prevImage": "Image précédente",
+    "nextImage": "Image suivante",
+    "private": "Privé",
+    "privateTooltip": "Code privé pour confidentialité du projet",
+    "items": [
+      {
+        "slug": "substitutions",
+        "category": "Outil de gestion",
+        "title": "Système de Gestion des Remplacements",
+        "description": "Automatise la logistique enseignante et la couverture des absences, en centralisant la communication entre direction et personnel.",
+        "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/substitute-management",
+        "isPrivate": false
+      },
+      {
+        "slug": "leafconnect",
+        "category": "Plateforme éducative",
+        "title": "LeafConection",
+        "description": "Plateforme de durabilité avec gamification pour encourager l'engagement environnemental en milieu éducatif.",
+        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
+        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
+        "isPrivate": false
+      },
+      {
+        "slug": "ota",
+        "category": "Outil d'analytique",
+        "title": "Analytiques de Réservations (OTA)",
+        "description": "Audit financier hôtelier avec contrôle des métriques Price-Match et suivi des abandons de panier.",
+        "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "slug": "environmental",
+        "category": "Outil d'analytique",
+        "title": "Module Environnemental (IA)",
+        "description": "Analyse des approvisionnements et déchets avec IA pour extraire les données des factures et générer des rapports comparatifs.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "slug": "minesweeper",
+        "category": "Jeu vidéo",
+        "title": "Démineur",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Implémentation classique avec logique de jeu et plateau dynamique.",
+        "tags": ["JavaScript", "HTML5", "CSS3"],
+        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "isPrivate": false
+      },
+      {
+        "slug": "piano",
+        "category": "Application web",
+        "title": "Piano Virtuel",
+        "description": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt. Clavier interactif avec lecture des notes dans le navigateur.",
+        "tags": ["JavaScript", "HTML5", "CSS3", "Web Audio API"],
+        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "isPrivate": false
+      }
     ]
   }
 }

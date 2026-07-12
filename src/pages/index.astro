@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
-import Projects from '../components/Projects.astro';
+import FeaturedProjects from '../components/FeaturedProjects.astro';
 import { getTranslations, normalizeLocale } from '../i18n';
 
 const locale = normalizeLocale(Astro.currentLocale);
@@ -20,7 +20,7 @@ const t = getTranslations(locale);
                 <Hero t={t.hero} />
             </section>
 
-            <Projects t={t.projects} />
+            <FeaturedProjects t={t.featuredProjects} />
         </div>
     </main>
 </Layout>

@@ -1,11 +1,13 @@
 {
   "meta": {
     "homeTitle": "Eduardo | Inicio",
-    "aboutTitle": "Eduardo | Sobre Mí"
+    "aboutTitle": "Eduardo | Sobre Mí",
+    "projectsTitle": "Eduardo | Proyectos"
   },
   "nav": {
     "home": "Inicio",
     "about": "Sobre Mí",
+    "projects": "Proyectos",
     "contact": "Contáctame",
     "themeToggle": "Cambiar tema",
     "languages": {
@@ -35,7 +37,7 @@
     "role": "Desarrollador Full Stack",
     "description": "Graduado en Desarrollo de Aplicaciones Web. Desarrollo soluciones web centradas en la gestión de procesos, el análisis de datos y la automatización. Me especializo en tecnologías como PHP, Laravel y MySQL, con especial interés en el backend, las bases de datos y la integración de APIs. Disfruto construyendo aplicaciones robustas, optimizando flujos de trabajo y convirtiendo datos en información útil para la toma de decisiones."
   },
-  "projects": {
+  "featuredProjects": {
     "heading": "Experiencia técnica y producto",
     "subtitle": "Soluciones de software diseñadas para escalar, optimizar procesos y transformar datos en decisiones estratégicas.",
     "viewCode": "Ver código",
@@ -116,6 +118,76 @@
     "items": [
       { "name": "Español", "level": "Nativo" },
       { "name": "Inglés", "level": "Fluido" }
+    ]
+  },
+  "projects": {
+    "badge": "Portafolio",
+    "heading": "Proyectos desarrollados",
+    "subtitle": "Una selección de aplicaciones, herramientas y experimentos que reflejan mi enfoque en backend, datos y experiencia de usuario.",
+    "viewCode": "Ver código",
+    "viewDocs": "Ver documentación",
+    "preview": "Vista previa",
+    "downloadPdf": "Descargar PDF",
+    "close": "Cerrar",
+    "prevImage": "Imagen anterior",
+    "nextImage": "Imagen siguiente",
+    "private": "Privado",
+    "privateTooltip": "Código privado por confidencialidad del proyecto",
+    "items": [
+      {
+        "slug": "substitutions",
+        "category": "Herramienta de gestión",
+        "title": "Sistema de Gestión de Guardias",
+        "description": "Automatiza la logística docente y la cobertura de ausencias, centralizando la comunicación entre dirección y profesorado.",
+        "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/substitute-management",
+        "isPrivate": false
+      },
+      {
+        "slug": "leafconnect",
+        "category": "Plataforma educativa",
+        "title": "LeafConection",
+        "description": "Plataforma de sostenibilidad con gamificación para fomentar el compromiso ambiental en entornos educativos.",
+        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
+        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
+        "isPrivate": false
+      },
+      {
+        "slug": "ota",
+        "category": "Herramienta de analíticas",
+        "title": "Analíticas de Reservas (OTA)",
+        "description": "Auditoría financiera hotelera con control de métricas Price-Match y seguimiento de abandonos de carrito.",
+        "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "slug": "environmental",
+        "category": "Herramienta de analíticas",
+        "title": "Módulo Medioambiental (IA)",
+        "description": "Análisis de suministros y residuos con IA para extraer datos de facturas y generar informes comparativos.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "slug": "minesweeper",
+        "category": "Videojuego",
+        "title": "Buscaminas",
+        "description": "Implementación del clásico Buscaminas con generación dinámica de tableros y lógica completa de juego.",
+        "tags": ["Java 21", "Java Swing"],
+        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "isPrivate": false
+      },
+      {
+        "slug": "piano",
+        "category": "Visión por Computador",
+        "title": "Piano Virtual",
+        "description": "Piano virtual con detección de manos mediante MediaPipe y reproducción interactiva de notas musicales.",
+        "tags": ["Python", "MediaPipe", "Pygame", "OpenCV", "FLAC Audio"],
+        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "isPrivate": false
+      }
     ]
   }
 }

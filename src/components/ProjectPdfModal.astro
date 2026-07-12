@@ -1,0 +1,67 @@
+---
+import type { Translations } from '../i18n';
+import type { ProjectSlug } from '../config/projects';
+import { getProjectPdfUrl } from '../config/projects';
+
+type ProjectItem = Translations['projects']['items'][number];
+
+interface Props {
+    project: ProjectItem;
+    labels: Translations['projects'];
+}
+
+const { project, labels } = Astro.props;
+const slug = project.slug as ProjectSlug;
+const pdfUrl = getProjectPdfUrl(slug);
+const modalId = `pdf-modal-${slug}`;
+
+if (!pdfUrl) return null;
+---
+
+<div
+    class="modal fade project-modal project-pdf-modal"
+    id={modalId}
+    tabindex="-1"
+    aria-labelledby={`${modalId}-label`}
+    aria-hidden="true"
+    data-pdf-url={pdfUrl}
+>
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content contact-modal">
+            <div class="modal-header border-0 pb-0">
+                <h2 class="modal-title section-title" id={`${modalId}-label`}>
+                    {labels.viewDocs} — {project.title}
+                </h2>
+                <button
+                    type="button"
+                    class="btn-close btn-close-themed"
+                    data-bs-dismiss="modal"
+                    aria-label={labels.close}
+                ></button>
+            </div>
+            <div class="modal-body pt-3">
+                <div class="project-pdf-viewer" data-pdf-viewer>
+                    <object
+                        data={pdfUrl}
+                        type="application/pdf"
+                        class="project-pdf-frame"
+                        data-pdf-object
+                    >
+                        <iframe
+                            src={pdfUrl}
+                            class="project-pdf-frame"
+                            title={`${labels.viewDocs} — ${project.title}`}
+                            data-pdf-iframe
+                        ></iframe>
+                    </object>
+                </div>
+                <div class="project-modal-actions">
+                    <a href={pdfUrl} download={`${slug}-documentacion.pdf`} class="btn btn-contact btn-sm">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        {labels.downloadPdf}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

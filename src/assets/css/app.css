@@ -69,6 +69,19 @@ body {
     color: var(--id-color-brand); 
 }
 
+.badge-status {
+    display: inline-block;
+    background-color: color-mix(in srgb, var(--id-color-brand) 10%, transparent);
+    color: var(--id-color-brand);
+    border: 1px solid var(--id-border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
 button, 
 .btn, 
 .nav-link-custom, 
@@ -220,4 +233,115 @@ button,
     background: rgba(255, 184, 77, 0.12);
     border: 1px solid rgba(255, 184, 77, 0.25);
     cursor: help;
+}
+
+.project-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.project-card-thumb {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid var(--id-border-color);
+    background: var(--id-surface-overlay);
+}
+
+.project-card-badge {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.85rem;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.private-btn {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.contact-modal {
+    background: var(--id-bg-superficie);
+    border: 1px solid var(--id-border-color);
+    border-radius: 20px;
+    color: var(--id-text-primary);
+}
+
+.btn-close-themed {
+    filter: none;
+    opacity: 0.7;
+}
+
+[data-bs-theme="dark"] .btn-close-themed {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.btn-contact {
+    background-color: var(--id-color-brand);
+    color: var(--id-btn-contact-text);
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-contact:hover {
+    transform: translateY(-2px);
+    background-color: var(--id-color-brand-hover);
+    color: var(--id-btn-contact-text);
+}
+
+.project-pdf-frame {
+    width: 100%;
+    height: 70vh;
+    min-height: 420px;
+    border: 1px solid var(--id-border-color);
+    border-radius: 12px;
+    background: var(--id-surface-overlay);
+}
+
+.project-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.project-carousel {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--id-border-color);
+    background: var(--id-surface-overlay);
+}
+
+.project-carousel-image {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    background: var(--id-bg-principal);
+}
+
+.project-carousel .carousel-control-prev,
+.project-carousel .carousel-control-next {
+    width: 10%;
+}
+
+.project-carousel .carousel-control-prev-icon,
+.project-carousel .carousel-control-next-icon {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
 }

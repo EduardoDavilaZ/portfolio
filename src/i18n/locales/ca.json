@@ -1,11 +1,13 @@
 {
   "meta": {
     "homeTitle": "Eduardo | Inici",
-    "aboutTitle": "Eduardo | Sobre mi"
+    "aboutTitle": "Eduardo | Sobre mi",
+    "projectsTitle": "Eduardo | Projectes"
   },
   "nav": {
     "home": "Inici",
     "about": "Sobre mi",
+    "projects": "Projectes",
     "contact": "Contacta'm",
     "themeToggle": "Canviar tema",
     "languages": {
@@ -35,7 +37,7 @@
     "role": "Desenvolupador Full Stack",
     "description": "Graduat en Desenvolupament d'Aplicacions Web. Desenvolupo solucions web centrades en la gestió de processos, l'anàlisi de dades i l'automatització. M'especialitzo en tecnologies com PHP, Laravel i MySQL, amb especial interès en el backend, les bases de dades i la integració d'APIs. M'agrada construir aplicacions robustes, optimitzar fluxos de treball i convertir dades en informació útil per a la presa de decisions."
   },
-  "projects": {
+  "featuredProjects": {
     "heading": "Experiència tècnica i producte",
     "subtitle": "Solucions de programari dissenyades per escalar, optimitzar processos i transformar dades en decisions estratègiques.",
     "viewCode": "Veure codi",
@@ -116,6 +118,76 @@
     "items": [
       { "name": "Espanyol", "level": "Natiu" },
       { "name": "Anglès", "level": "Fluid" }
+    ]
+  },
+  "projects": {
+    "badge": "Portafoli",
+    "heading": "Projectes desenvolupats",
+    "subtitle": "Una selecció d'aplicacions, eines i experiments que reflecteixen el meu enfocament en backend, dades i experiència d'usuari.",
+    "viewCode": "Veure codi",
+    "viewDocs": "Veure documentació",
+    "preview": "Vista prèvia",
+    "downloadPdf": "Descarregar PDF",
+    "close": "Tancar",
+    "prevImage": "Imatge anterior",
+    "nextImage": "Imatge següent",
+    "private": "Privat",
+    "privateTooltip": "Codi privat per confidencialitat del projecte",
+    "items": [
+      {
+        "slug": "substitutions",
+        "category": "Eina de gestió",
+        "title": "Sistema de Gestió de Guàrdies",
+        "description": "Automatitza la logística docent i la cobertura d'absències, centralitzant la comunicació entre direcció i professorat.",
+        "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/substitute-management",
+        "isPrivate": false
+      },
+      {
+        "slug": "leafconnect",
+        "category": "Plataforma educativa",
+        "title": "LeafConection",
+        "description": "Plataforma de sostenibilitat amb gamificació per fomentar el compromís ambiental en entorns educatius.",
+        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
+        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
+        "isPrivate": false
+      },
+      {
+        "slug": "ota",
+        "category": "Eina d'analítiques",
+        "title": "Analítiques de Reserves (OTA)",
+        "description": "Auditoria financera hotelera amb control de mètriques Price-Match i seguiment d'abandonaments de cistella.",
+        "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "slug": "environmental",
+        "category": "Eina d'analítiques",
+        "title": "Mòdul Mediambiental (IA)",
+        "description": "Anàlisi de subministraments i residus amb IA per extreure dades de factures i generar informes comparatius.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "slug": "minesweeper",
+        "category": "Videojoc",
+        "title": "Pescamines",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Implementació clàssica amb lògica de joc i tauler dinàmic.",
+        "tags": ["JavaScript", "HTML5", "CSS3"],
+        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "isPrivate": false
+      },
+      {
+        "slug": "piano",
+        "category": "Aplicació web",
+        "title": "Piano Virtual",
+        "description": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt. Teclat interactiu amb reproducció de notes al navegador.",
+        "tags": ["JavaScript", "HTML5", "CSS3", "Web Audio API"],
+        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "isPrivate": false
+      }
     ]
   }
 }

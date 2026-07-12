@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets';
+import type { Translations } from '../i18n';
+import type { ProjectSlug } from '../config/projects';
+import { getProjectIcon, getProjectGallery, getProjectPdfUrl } from '../config/projects';
+
+type ProjectItem = Translations['projects']['items'][number];
+
+interface Props {
+    project: ProjectItem;
+    labels: Translations['projects'];
+}
+
+const { project, labels } = Astro.props;
+const slug = project.slug as ProjectSlug;
+
+const icon = getProjectIcon(slug);
+const gallery = getProjectGallery(slug);
+const pdfUrl = getProjectPdfUrl(slug);
+
+const pdfModalId = `pdf-modal-${slug}`;
+const galleryModalId = `gallery-modal-${slug}`;
+---
+
+<article class="project-card h-100 d-flex flex-column">
+    {icon && (
+        <div class="project-card-icon mb-3">
+            <Image
+                src={icon}
+                alt={project.title}
+                width={72}
+                height={72}
+                class="project-card-thumb"
+            />
+        </div>
+    )}
+
+    <span class="badge-status project-card-badge">{project.category}</span>
+
+    <h3>{project.title}</h3>
+    <p class="text-secondary">{project.description}</p>
+
+    <div class="mt-auto pt-3 border-top border-secondary-subtle">
+        <div class="tags mb-3">
+            {project.tags.map((tag) => (
+                <span class="project-tag">{tag}</span>
+            ))}
+        </div>
+
+        <div class="project-actions">
+            {project.isPrivate ? (
+                <>
+                    <span class="private-badge" title={labels.privateTooltip}>
+                        <i class="bi bi-lock-fill"></i>
+                        {labels.private}
+                    </span>
+                    <button
+                        class="btn btn-outline-theme btn-sm private-btn"
+                        disabled
+                        title={labels.privateTooltip}
+                    >
+                        <i class="bi bi-github"></i>
+                        {labels.viewCode}
+                    </button>
+                </>
+            ) : (
+                <a
+                    href={project.githubUrl!}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline-theme btn-sm"
+                >
+                    <i class="bi bi-github"></i>
+                    {labels.viewCode}
+                </a>
+            )}
+
+            {pdfUrl && (
+                <button
+                    type="button"
+                    class="btn btn-outline-theme btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target={`#${pdfModalId}`}
+                    data-pdf-url={pdfUrl}
+                >
+                    <i class="fa-solid fa-file-lines"></i>
+                    {labels.viewDocs}
+                </button>
+            )}
+
+            {gallery.length > 0 && (
+                <button
+                    type="button"
+                    class="btn btn-outline-theme btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target={`#${galleryModalId}`}
+                    title={labels.preview}
+                >
+                    <i class="fa-solid fa-eye"></i>
+                    <span class="visually-hidden">{labels.preview}</span>
+                </button>
+            )}
+        </div>
+    </div>
+</article>

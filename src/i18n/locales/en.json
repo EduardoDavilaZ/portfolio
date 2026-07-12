@@ -1,11 +1,13 @@
 {
   "meta": {
     "homeTitle": "Eduardo | Home",
-    "aboutTitle": "Eduardo | About Me"
+    "aboutTitle": "Eduardo | About Me",
+    "projectsTitle": "Eduardo | Projects"
   },
   "nav": {
     "home": "Home",
     "about": "About Me",
+    "projects": "Projects",
     "contact": "Contact me",
     "themeToggle": "Toggle theme",
     "languages": {
@@ -35,7 +37,7 @@
     "role": "Full Stack Developer",
     "description": "Graduate in Web Application Development. I build web solutions focused on process management, data analysis, and automation. I specialize in technologies such as PHP, Laravel, and MySQL, with a particular interest in backend development, databases, and API integration. I enjoy building robust applications, optimizing workflows, and turning data into actionable insights for decision-making."
   },
-  "projects": {
+  "featuredProjects": {
     "heading": "Technical & product experience",
     "subtitle": "Software solutions designed to scale, optimize processes, and turn data into strategic decisions.",
     "viewCode": "View code",
@@ -116,6 +118,76 @@
     "items": [
       { "name": "Spanish", "level": "Native" },
       { "name": "English", "level": "Fluent" }
+    ]
+  },
+  "projects": {
+    "badge": "Portfolio",
+    "heading": "Developed projects",
+    "subtitle": "A selection of applications, tools, and experiments reflecting my focus on backend, data, and user experience.",
+    "viewCode": "View code",
+    "viewDocs": "View documentation",
+    "preview": "Preview",
+    "downloadPdf": "Download PDF",
+    "close": "Close",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "private": "Private",
+    "privateTooltip": "Private code due to project confidentiality",
+    "items": [
+      {
+        "slug": "substitutions",
+        "category": "Management tool",
+        "title": "Substitute Management System",
+        "description": "Automates teacher logistics and absence coverage, centralizing communication between management and staff.",
+        "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/substitute-management",
+        "isPrivate": false
+      },
+      {
+        "slug": "leafconnect",
+        "category": "Educational platform",
+        "title": "LeafConection",
+        "description": "Sustainability platform with gamification to encourage environmental engagement in educational settings.",
+        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
+        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
+        "isPrivate": false
+      },
+      {
+        "slug": "ota",
+        "category": "Analytics tool",
+        "title": "Booking Analytics (OTA)",
+        "description": "Hotel financial audit with Price-Match metrics control and cart abandonment tracking.",
+        "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "slug": "environmental",
+        "category": "Analytics tool",
+        "title": "Environmental Module (AI)",
+        "description": "Supply and waste analysis with AI to extract invoice data and generate comparative reports.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "slug": "minesweeper",
+        "category": "Video game",
+        "title": "Minesweeper",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Classic implementation with game logic and dynamic board.",
+        "tags": ["JavaScript", "HTML5", "CSS3"],
+        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "isPrivate": false
+      },
+      {
+        "slug": "piano",
+        "category": "Web application",
+        "title": "Virtual Piano",
+        "description": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt. Interactive keyboard with note playback in the browser.",
+        "tags": ["JavaScript", "HTML5", "CSS3", "Web Audio API"],
+        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "isPrivate": false
+      }
     ]
   }
 }

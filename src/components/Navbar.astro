@@ -27,10 +27,12 @@ const localeLinks: { code: Locale; flag: ImageMetadata; label: string }[] = [
 // Generamos las URLs base para comparar
 const homeUrl = getRelativeLocaleUrl(locale);
 const aboutUrl = getRelativeLocaleUrl(locale, 'about-me');
+const projectsUrl = getRelativeLocaleUrl(locale, 'projects');
 
 // Comparamos la ruta actual con las URLs generadas
 const isHomeActive = Astro.url.pathname === homeUrl || Astro.url.pathname === homeUrl + '/';
 const isAboutActive = Astro.url.pathname === aboutUrl || Astro.url.pathname === aboutUrl + '/';
+const isProjectsActive = Astro.url.pathname === projectsUrl || Astro.url.pathname === projectsUrl + '/';
 ---
 
 <nav class="navbar navbar-expand-lg py-3 custom-navbar">
@@ -54,11 +56,21 @@ const isAboutActive = Astro.url.pathname === aboutUrl || Astro.url.pathname === 
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a class={`nav-link-custom ${isProjectsActive ? 'active' : ''}`} href={projectsUrl}>
+                        {t.nav.projects}
+                    </a>
+                </li>
+
                 <li class="nav-item dropdown ms-lg-3">
-                    <button class="btn-lang dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <button class="btn-lang dropdown-toggle"
+                        type="button"
+                        id="languageDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <i class="fa-solid fa-globe me-2"></i> {getLocaleLabel(locale)}
                     </button>
-                    <ul class="dropdown-menu dropdown-custom">
+                    <ul class="dropdown-menu dropdown-custom" aria-labelledby="languageDropdown">
                         {localeLinks.map(({ code, flag, label }) => (
                             <li>
                                 <a
@@ -181,25 +193,7 @@ const isAboutActive = Astro.url.pathname === aboutUrl || Astro.url.pathname === 
         background-color: var(--id-bg-superficie);
         border: 1px solid var(--id-border-color);
         margin-top: 0.5rem;
-
-        max-height: 0;
-        overflow: hidden;
-        transform: translateY(-10px);
-        display: block !important;
-    
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transform: translateY(-10px);
-        visibility: hidden;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        
-        &.show {
-            max-height: 300px; 
-            opacity: 1;
-            transform: translateY(0);
-            visibility: visible;
-        }
+        min-width: 12rem;
 
         .dropdown-item {
             color: var(--id-text-primary);

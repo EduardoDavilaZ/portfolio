@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ProjectPdfModal from '../components/ProjectPdfModal.astro';
+import ProjectGalleryModal from '../components/ProjectGalleryModal.astro';
+import { getTranslations, normalizeLocale } from '../i18n';
+
+const locale = normalizeLocale(Astro.currentLocale);
+const t = getTranslations(locale);
+---
+
+<Layout title={t.meta.projectsTitle} locale={locale}>
+    <Navbar locale={locale} t={t} />
+
+    <main class="main-wrapper container py-5 position-relative">
+        <div id="bg-ambient-particles" class="position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="content-container position-relative">
+            <section class="project-section py-2">
+                <div class="project-section-heading reveal mb-5">
+                    <span class="badge-status">{t.projects.badge}</span>
+                    <h1 class="section-heading">{t.projects.heading}</h1>
+                    <p class="section-subtitle">{t.projects.subtitle}</p>
+                </div>
+
+                <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    {t.projects.items.map((project) => (
+                        <div class="col">
+                            <ProjectCard project={project} labels={t.projects} />
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="project-modals-root">
+        {t.projects.items.map((project) => (
+            <ProjectPdfModal project={project} labels={t.projects} />
+        ))}
+        {t.projects.items.map((project) => (
+            <ProjectGalleryModal project={project} labels={t.projects} />
+        ))}
+    </div>
+</Layout>
+
+<style>
+    .content-container {
+        z-index: 1;
+    }
+</style>
+

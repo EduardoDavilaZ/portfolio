@@ -1,0 +1,121 @@
+---
+import { Image } from 'astro:assets';
+import type { Translations } from '../i18n';
+import type { ProjectSlug } from '../config/projects';
+import { getProjectGallery } from '../config/projects';
+
+type ProjectItem = Translations['projects']['items'][number];
+
+interface Props {
+    project: ProjectItem;
+    labels: Translations['projects'];
+}
+
+const { project, labels } = Astro.props;
+const slug = project.slug as ProjectSlug;
+const gallery = getProjectGallery(slug);
+const modalId = `gallery-modal-${slug}`;
+const carouselId = `carousel-${slug}`;
+
+if (gallery.length === 0) return null;
+---
+
+<div
+    class="modal fade project-modal project-gallery-modal"
+    id={modalId}
+    tabindex="0"
+    aria-labelledby={`${modalId}-label`}
+    aria-hidden="true"
+    data-carousel-id={carouselId}
+>
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content contact-modal">
+            <div class="modal-header border-0 pb-0">
+                <h2 class="modal-title section-title" id={`${modalId}-label`}>
+                    {labels.preview} — {project.title}
+                </h2>
+                <button
+                    type="button"
+                    class="btn-close btn-close-themed"
+                    data-bs-dismiss="modal"
+                    aria-label={labels.close}
+                ></button>
+            </div>
+            <div class="modal-body pt-3">
+                <div
+                    id={carouselId}
+                    class="carousel slide project-carousel"
+                    data-bs-interval="false"
+                    data-bs-touch="true"
+                    data-bs-wrap="true"
+                >
+                    <div class="carousel-inner">
+                        {gallery.map((image, index) => (
+                            <div class={`carousel-item${index === 0 ? ' active' : ''}`}>
+                                <Image
+                                    src={image}
+                                    alt={`${project.title} — ${index + 1}`}
+                                    class="project-carousel-image d-block w-100"
+                                    widths={[800, 1200, 1600]}
+                                    sizes="(max-width: 768px) 100vw, 900px"
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    {gallery.length > 1 && (
+                        <>
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target={`#${carouselId}`}
+                                data-bs-slide="prev"
+                            >
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">{labels.prevImage}</span>
+                            </button>
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target={`#${carouselId}`}
+                                data-bs-slide="next"
+                            >
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">{labels.nextImage}</span>
+                            </button>
+
+                            <div class="carousel-indicators project-carousel-indicators">
+                                {gallery.map((_, index) => (
+                                    <button
+                                        type="button"
+                                        data-bs-target={`#${carouselId}`}
+                                        data-bs-slide-to={index}
+                                        class={index === 0 ? 'active' : ''}
+                                        aria-label={`${labels.preview} ${index + 1}`}
+                                        aria-current={index === 0 ? 'true' : undefined}
+                                    ></button>
+                                ))}
+                            </div>
+                        </>
+                    )}
+                </div>
+
+                {gallery.length > 1 && (
+                    <p class="project-carousel-counter text-secondary text-center mb-0 mt-3" data-carousel-counter>
+                        1 / {gallery.length}
+                    </p>
+                )}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon{
+        width: 4rem;
+        height: 4rem;
+        background-size: 100%;
+        filter: brightness(0) invert(1);
+    }
+</style>
