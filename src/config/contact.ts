@@ -5,5 +5,10 @@ export const contactInfo = {
     location: "Badajoz, España",
     github: "https://github.com/EduardoDavilaZ",
     linkedin: "https://www.linkedin.com/in/edavilaz/",
-    cvUrl: "/docs/cv-eduardo-davila.pdf"
+    cvUrl: {
+        es: "/docs/cv/cv-eduardo-davila-es.pdf",
+        ca: "/docs/cv/cv-eduardo-davila-ca.pdf",
+        en: "/docs/cv/cv-eduardo-davila-en.pdf",
+        fr: "/docs/cv/cv-eduardo-davila-fr.pdf"
+    }
 };

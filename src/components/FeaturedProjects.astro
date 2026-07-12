@@ -1,17 +1,22 @@
 ---
-import type { Translations } from '../i18n';
+import type { Translations } from "../i18n";
+import {
+    getProjectGallery,
+    getProjectPdfUrl,
+    type ProjectSlug
+} from "../config/projects";
 
 interface Props {
-    t: Translations['featuredProjects'];
+    t: Translations["featuredProjects"];
 }
 
 const { t } = Astro.props;
 
 const layoutClasses = [
-    'col-12 col-md-7 col-lg-8',
-    'col-12 col-md-5 col-lg-4',
-    'col-12 col-md-5 col-lg-4',
-    'col-12 col-md-7 col-lg-8'
+    "col-12 col-md-7 col-lg-8",
+    "col-12 col-md-5 col-lg-4",
+    "col-12 col-md-5 col-lg-4",
+    "col-12 col-md-7 col-lg-8"
 ];
 ---
 
@@ -22,50 +27,95 @@ const layoutClasses = [
     </div>
 
     <div class="row g-4">
-        {t.items.map((project, index) => (
-            <div class={layoutClasses[index]}>
-                <article class="project-card h-100 d-flex flex-column">
-                    <h3>{project.title}</h3>
-                    <p class="text-secondary">{project.description}</p>
-                    <div class="mt-auto pt-3 border-top border-secondary-subtle">
-                        <div class="tags mb-3">
-                            {project.tags.map(tag => (
-                                <span class="project-tag">{tag}</span>
-                            ))}
-                        </div>
+        {t.items.map((project, index) => {
+            const slug = project.slug as ProjectSlug;
+            const gallery = getProjectGallery(slug);
+            const pdfUrl = getProjectPdfUrl(slug);
 
-                        <div class="project-actions">
-                            {project.isPrivate ? (
-                                <>
-                                    <span class="private-badge" title={t.privateTooltip}>
-                                        <i class="bi bi-lock-fill"></i>
-                                        {t.private}
-                                    </span>
-                                    <button
-                                        class="btn btn-outline-theme btn-sm private-btn"
-                                        disabled
-                                        title={t.privateTooltip}
+            const pdfModalId = `pdf-modal-${slug}`;
+            const galleryModalId = `gallery-modal-${slug}`;
+
+            return (
+                <div class={layoutClasses[index]}>
+                    <article class="project-card h-100 d-flex flex-column">
+                        <h3>{project.title}</h3>
+
+                        <p class="text-secondary">
+                            {project.description}
+                        </p>
+
+                        <div class="mt-auto pt-3 border-top border-secondary-subtle">
+                            <div class="tags mb-3">
+                                {project.tags.map((tag) => (
+                                    <span class="project-tag">{tag}</span>
+                                ))}
+                            </div>
+
+                            <div class="project-actions">
+                                {project.isPrivate ? (
+                                    <>
+                                        <span
+                                            class="private-badge"
+                                            title={t.privateTooltip}
+                                        >
+                                            <i class="bi bi-lock-fill"></i>
+                                            {t.private}
+                                        </span>
+
+                                        <button
+                                            class="btn btn-outline-theme btn-sm private-btn"
+                                            disabled
+                                            title={t.privateTooltip}
+                                        >
+                                            <i class="bi bi-github"></i>
+                                            {t.viewCode}
+                                        </button>
+                                    </>
+                                ) : (
+                                    <a
+                                        href={project.githubUrl!}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="btn btn-outline-theme btn-sm"
                                     >
                                         <i class="bi bi-github"></i>
                                         {t.viewCode}
+                                    </a>
+                                )}
+
+                                {pdfUrl && (
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-theme btn-sm"
+                                        data-bs-toggle="modal"
+                                        data-bs-target={`#${pdfModalId}`}
+                                        data-pdf-url={pdfUrl}
+                                    >
+                                        <i class="fa-solid fa-file-lines"></i>
+                                        {t.viewDocs}
                                     </button>
-                                </>
-                            ) : (
-                                <a
-                                    href={project.githubUrl!}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="btn btn-outline-theme btn-sm"
-                                >
-                                    <i class="bi bi-github"></i>
-                                    {t.viewCode}
-                                </a>
-                            )}
+                                )}
+
+                                {gallery.length > 0 && (
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-theme btn-sm"
+                                        data-bs-toggle="modal"
+                                        data-bs-target={`#${galleryModalId}`}
+                                        title={t.preview}
+                                    >
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span class="visually-hidden">
+                                            {t.preview}
+                                        </span>
+                                    </button>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                </article>
-            </div>
-        ))}
+                    </article>
+                </div>
+            );
+        })}
     </div>
 </section>
 

@@ -35,7 +35,9 @@
     "greeting": "Bonjour, je suis",
     "name": "Eduardo",
     "role": "Développeur Full Stack",
-    "description": "Diplômé en Développement d'Applications Web. Je développe des solutions web centrées sur la gestion des processus, l'analyse de données et l'automatisation. Je me spécialise dans des technologies comme PHP, Laravel et MySQL, avec un intérêt particulier pour le backend, les bases de données et l'intégration d'API. J'aime construire des applications robustes, optimiser les flux de travail et transformer les données en informations utiles pour la prise de décision."
+    "description": "Diplômé en développement d'applications web, spécialisé dans le développement backend avec PHP, Laravel et MySQL, je conçois des applications axées sur la gestion des processus, l'analyse de données et l'intégration d'API, en privilégiant des solutions robustes, évolutives et faciles à maintenir.",
+    "email": "E-mail",
+    "downloadCv": "Télécharger le CV"
   },
   "featuredProjects": {
     "heading": "Expérience technique et produit",
@@ -43,8 +45,14 @@
     "viewCode": "Voir le code",
     "private": "Privé",
     "privateTooltip": "Code privé pour confidentialité du projet",
+    "viewDocs": "Voir la documentation",
+    "preview": "Aperçu",
+    "close": "Fermer",
+    "prevImage": "Image précédente",
+    "nextImage": "Image suivante",
     "items": [
       {
+        "slug": "substitutions",
         "title": "Système de Gestion des Remplacements",
         "description": "J'ai développé une solution robuste pour automatiser la logistique enseignante et la couverture des absences dans des environnements éducatifs complexes. Le système élimine les frictions administratives en centralisant la communication entre la direction et le corps enseignant, garantissant que chaque incident soit résolu de manière intelligente et en temps réel.",
         "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
@@ -52,6 +60,7 @@
         "isPrivate": false
       },
       {
+        "slug": "leafconnect",
         "title": "LeafConection",
         "description": "Plateforme éducative de durabilité centrée sur l'expérience utilisateur. J'ai implémenté des mécaniques de gamification pour encourager l'engagement environnemental.",
         "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
@@ -59,6 +68,7 @@
         "isPrivate": false
       },
       {
+        "slug": "ota",
         "title": "Analytiques de Réservations (OTA)",
         "description": "Outil d'audit financier conçu pour optimiser la conversion hôtelière grâce au contrôle des métriques Price-Match et au suivi des abandons de panier.",
         "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
@@ -66,6 +76,7 @@
         "isPrivate": true
       },
       {
+        "slug": "environmental",
         "title": "Module Environnemental (Intégration IA)",
         "description": "Cette plateforme transforme la gestion hôtelière grâce à l'IA, centralisant l'analyse des approvisionnements et des déchets pour optimiser l'efficacité énergétique. Son moteur extrait des données critiques des factures et génère des rapports comparatifs interannuels, normalisés par chambre ou séjour, pour détecter les inefficacités via des graphiques dynamiques. En essence, c'est un outil d'Intelligence des Données qui transforme les factures en décisions stratégiques d'économie et de durabilité.",
         "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Postman", "Bootstrap", "DataTables", "MySQL"],
@@ -175,7 +186,7 @@
         "category": "Jeu vidéo",
         "title": "Démineur",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Implémentation classique avec logique de jeu et plateau dynamique.",
-        "tags": ["JavaScript", "HTML5", "CSS3"],
+        "tags": ["Java 21", "Java Swing"],
         "githubUrl": "https://github.com/EduardoDavilaZ",
         "isPrivate": false
       },
@@ -184,7 +195,7 @@
         "category": "Application web",
         "title": "Piano Virtuel",
         "description": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt. Clavier interactif avec lecture des notes dans le navigateur.",
-        "tags": ["JavaScript", "HTML5", "CSS3", "Web Audio API"],
+        "tags": ["Python", "MediaPipe", "Pygame", "OpenCV", "FLAC Audio"],
         "githubUrl": "https://github.com/EduardoDavilaZ",
         "isPrivate": false
       }

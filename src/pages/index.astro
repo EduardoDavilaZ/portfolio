@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import FeaturedProjects from '../components/FeaturedProjects.astro';
+import ProjectPdfModal from '../components/ProjectPdfModal.astro';
+import ProjectGalleryModal from '../components/ProjectGalleryModal.astro';
 import { getTranslations, normalizeLocale } from '../i18n';
 
 const locale = normalizeLocale(Astro.currentLocale);
@@ -12,17 +14,26 @@ const t = getTranslations(locale);
 <Layout title={t.meta.homeTitle} locale={locale}>
     <Navbar locale={locale} t={t} />
 
-    <main class="main-wrapper container py-5 position-relative">
+    <main class="main-wrapper container py-3 py-lg-5 position-relative">
         <div id="bg-ambient-particles" class="position-absolute top-0 start-0 w-100 h-100"></div>
 
         <div class="content-container position-relative">
             <section class="portfolio-section">
-                <Hero t={t.hero} />
+                <Hero t={t.hero} locale={locale} />
             </section>
 
             <FeaturedProjects t={t.featuredProjects} />
         </div>
     </main>
+
+    <div class="project-modals-root">
+        {t.projects.items.map((project) => (
+            <ProjectPdfModal project={project} labels={t.projects} />
+        ))}
+        {t.projects.items.map((project) => (
+            <ProjectGalleryModal project={project} labels={t.projects} />
+        ))}
+    </div>
 </Layout>
 
 <style>

@@ -35,7 +35,9 @@
     "greeting": "Hola, soy",
     "name": "Eduardo",
     "role": "Desarrollador Full Stack",
-    "description": "Graduado en Desarrollo de Aplicaciones Web. Desarrollo soluciones web centradas en la gestión de procesos, el análisis de datos y la automatización. Me especializo en tecnologías como PHP, Laravel y MySQL, con especial interés en el backend, las bases de datos y la integración de APIs. Disfruto construyendo aplicaciones robustas, optimizando flujos de trabajo y convirtiendo datos en información útil para la toma de decisiones."
+    "description": "Graduado en Desarrollo de Aplicaciones Web, especializado en backend con PHP, Laravel y MySQL. Desarrollo aplicaciones enfocadas en la gestión de procesos, el análisis de datos y la integración de APIs, priorizando soluciones robustas, escalables y fáciles de mantener.",
+    "email": "Correo",
+    "downloadCv": "Descargar currículum"
   },
   "featuredProjects": {
     "heading": "Experiencia técnica y producto",
@@ -43,8 +45,14 @@
     "viewCode": "Ver código",
     "private": "Privado",
     "privateTooltip": "Código privado por confidencialidad del proyecto",
+    "viewDocs": "Ver documentación",
+    "preview": "Vista previa",
+    "close": "Cerrar",
+    "prevImage": "Imagen anterior",
+    "nextImage": "Imagen siguiente",
     "items": [
       {
+        "slug": "substitutions",
         "title": "Sistema de Gestión de Guardias",
         "description": "Desarrollé una solución robusta para automatizar la logística docente y la cobertura de ausencias en entornos educativos complejos. El sistema elimina la fricción administrativa al centralizar la comunicación entre la dirección y el profesorado, asegurando que cada incidencia sea resuelta de forma inteligente y en tiempo real.",
         "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
@@ -52,6 +60,7 @@
         "isPrivate": false
       },
       {
+        "slug": "leafconnect",
         "title": "LeafConection",
         "description": "Plataforma educativa de sostenibilidad centrada en la experiencia de usuario. Implementé mecánicas de gamificación para fomentar el compromiso ambiental.",
         "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
@@ -59,6 +68,7 @@
         "isPrivate": false
       },
       {
+        "slug": "ota",
         "title": "Analíticas de Reservas (OTA)",
         "description": "Herramienta de auditoría financiera diseñada para optimizar la conversión hotelera mediante el control de métricas de Price-Match y el seguimiento de abandonos de carrito.",
         "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
@@ -66,6 +76,7 @@
         "isPrivate": true
       },
       {
+        "slug": "environmental",
         "title": "Módulo Medioambiental (IA Integration)",
         "description": "Esta plataforma transforma la gestión hotelera mediante IA, centralizando el análisis de suministros y residuos para optimizar la eficiencia energética. Su motor permite extraer datos críticos de facturas y generar informes comparativos interanuales, normalizados por habitación o estancia, para detectar ineficiencias mediante gráficos dinámicos. Es, en esencia, una herramienta de Inteligencia de Datos que convierte facturas en decisiones estratégicas de ahorro y sostenibilidad.",
         "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Postman", "Bootstrap", "DataTables", "MySQL"],

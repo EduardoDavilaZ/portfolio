@@ -1,12 +1,13 @@
 ---
-import type { Translations } from '../i18n';
+import type { Translations, Locale } from '../i18n';
 import { contactInfo } from '../config/contact';
 
 interface Props {
-    t: Translations['contact'];
+    t: Translations["contact"];
+    locale: Locale;
 }
 
-const { t } = Astro.props;
+const { t, locale } = Astro.props;
 ---
 
 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
@@ -58,7 +59,7 @@ const { t } = Astro.props;
                         <i class="fa-brands fa-github"></i>
                         GitHub
                     </a>
-                    <a href={contactInfo.cvUrl} download class="btn btn-contact btn-sm">
+                    <a href={contactInfo.cvUrl[locale]} download class="btn btn-contact btn-sm">
                         <i class="fa-solid fa-file-arrow-down"></i>
                         {t.downloadCv}
                     </a>

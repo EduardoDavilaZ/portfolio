@@ -47,7 +47,7 @@ const t = getTranslations(locale);
         <div id="bg-ambient-particles" aria-hidden="true"></div>
         <slot />
 
-        <ContactModal t={t.contact} />
+        <ContactModal t={t.contact} locale={locale} />
         <Footer t={t.footer} />
 
         <script>

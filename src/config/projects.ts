@@ -47,7 +47,8 @@ export function getProjectGallery(slug: ProjectSlug): ImageMetadata[] {
 
 const projectsWithPdf: ProjectSlug[] = [
     'environmental',
-    'ota'
+    'ota',
+    'substitutions'
 ];
 
 export function getProjectPdfUrl(slug: ProjectSlug): string | undefined {

@@ -35,7 +35,9 @@
     "greeting": "Hi, I'm",
     "name": "Eduardo",
     "role": "Full Stack Developer",
-    "description": "Graduate in Web Application Development. I build web solutions focused on process management, data analysis, and automation. I specialize in technologies such as PHP, Laravel, and MySQL, with a particular interest in backend development, databases, and API integration. I enjoy building robust applications, optimizing workflows, and turning data into actionable insights for decision-making."
+    "description": "Graduate in Web Application Development, specializing in backend development with PHP, Laravel, and MySQL. I develop applications focused on process management, data analysis, and API integration, prioritizing robust, scalable, and easy-to-maintain solutions.",
+    "email": "Email",
+    "downloadCv": "Download CV"
   },
   "featuredProjects": {
     "heading": "Technical & product experience",
@@ -43,8 +45,14 @@
     "viewCode": "View code",
     "private": "Private",
     "privateTooltip": "Private code due to project confidentiality",
+    "viewDocs": "View documentation",
+    "preview": "Preview",
+    "close": "Close",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
     "items": [
       {
+        "slug": "substitutions",
         "title": "Substitute Management System",
         "description": "I developed a robust solution to automate teacher logistics and absence coverage in complex educational environments. The system removes administrative friction by centralizing communication between management and staff, ensuring every incident is resolved intelligently and in real time.",
         "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
@@ -52,6 +60,7 @@
         "isPrivate": false
       },
       {
+        "slug": "leafconnect",
         "title": "LeafConection",
         "description": "Educational sustainability platform focused on user experience. I implemented gamification mechanics to encourage environmental engagement.",
         "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
@@ -59,6 +68,7 @@
         "isPrivate": false
       },
       {
+        "slug": "ota",
         "title": "Booking Analytics (OTA)",
         "description": "Financial audit tool designed to optimize hotel conversion through Price-Match metrics control and cart abandonment tracking.",
         "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
@@ -66,6 +76,7 @@
         "isPrivate": true
       },
       {
+        "slug": "environmental",
         "title": "Environmental Module (AI Integration)",
         "description": "This platform transforms hotel management through AI, centralizing supply and waste analysis to optimize energy efficiency. Its engine extracts critical data from invoices and generates year-over-year comparative reports, normalized by room or stay, to detect inefficiencies through dynamic charts. In essence, it is a Data Intelligence tool that turns invoices into strategic savings and sustainability decisions.",
         "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Postman", "Bootstrap", "DataTables", "MySQL"],
@@ -175,7 +186,7 @@
         "category": "Video game",
         "title": "Minesweeper",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Classic implementation with game logic and dynamic board.",
-        "tags": ["JavaScript", "HTML5", "CSS3"],
+        "tags": ["Java 21", "Java Swing"],
         "githubUrl": "https://github.com/EduardoDavilaZ",
         "isPrivate": false
       },
@@ -184,7 +195,7 @@
         "category": "Web application",
         "title": "Virtual Piano",
         "description": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt. Interactive keyboard with note playback in the browser.",
-        "tags": ["JavaScript", "HTML5", "CSS3", "Web Audio API"],
+        "tags": ["Python", "MediaPipe", "Pygame", "OpenCV", "FLAC Audio"],
         "githubUrl": "https://github.com/EduardoDavilaZ",
         "isPrivate": false
       }

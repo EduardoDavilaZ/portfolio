@@ -35,7 +35,9 @@
     "greeting": "Hola, sóc",
     "name": "Eduardo",
     "role": "Desenvolupador Full Stack",
-    "description": "Graduat en Desenvolupament d'Aplicacions Web. Desenvolupo solucions web centrades en la gestió de processos, l'anàlisi de dades i l'automatització. M'especialitzo en tecnologies com PHP, Laravel i MySQL, amb especial interès en el backend, les bases de dades i la integració d'APIs. M'agrada construir aplicacions robustes, optimitzar fluxos de treball i convertir dades en informació útil per a la presa de decisions."
+    "description": "Graduat en Desenvolupament d'Aplicacions Web, especialitzat en backend amb PHP, Laravel i MySQL. Desenvolupament d'aplicacions enfocades a la gestió de processos, l'anàlisi de dades i la integració d'APIs, prioritzant solucions robustes, escalables i fàcils de mantenir.",
+    "email": "Correu",
+    "downloadCv": "Descarregar currículum"
   },
   "featuredProjects": {
     "heading": "Experiència tècnica i producte",
@@ -43,8 +45,14 @@
     "viewCode": "Veure codi",
     "private": "Privat",
     "privateTooltip": "Codi privat per confidencialitat del projecte",
+    "viewDocs": "Veure documentació",
+    "preview": "Vista prèvia",
+    "close": "Tancar",
+    "prevImage": "Imatge anterior",
+    "nextImage": "Imatge següent",
     "items": [
       {
+        "slug": "substitutions",
         "title": "Sistema de Gestió de Guàrdies",
         "description": "Vaig desenvolupar una solució robusta per automatitzar la logística docent i la cobertura d'absències en entorns educatius complexos. El sistema elimina la fricció administrativa en centralitzar la comunicació entre la direcció i el professorat, assegurant que cada incidència es resolgui de forma intel·ligent i en temps real.",
         "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
@@ -52,6 +60,7 @@
         "isPrivate": false
       },
       {
+        "slug": "leafconnect",
         "title": "LeafConection",
         "description": "Plataforma educativa de sostenibilitat centrada en l'experiència d'usuari. Vaig implementar mecàniques de gamificació per fomentar el compromís ambiental.",
         "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
@@ -59,6 +68,7 @@
         "isPrivate": false
       },
       {
+        "slug": "ota",
         "title": "Analítiques de Reserves (OTA)",
         "description": "Eina d'auditoria financera dissenyada per optimitzar la conversió hotelera mitjançant el control de mètriques de Price-Match i el seguiment d'abandonaments de cistella.",
         "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
@@ -66,6 +76,7 @@
         "isPrivate": true
       },
       {
+        "slug": "environmental",
         "title": "Mòdul Mediambiental (Integració IA)",
         "description": "Aquesta plataforma transforma la gestió hotelera mitjançant IA, centralitzant l'anàlisi de subministraments i residus per optimitzar l'eficiència energètica. El seu motor permet extreure dades crítiques de factures i generar informes comparatius interanuals, normalitzats per habitació o estada, per detectar ineficiències mitjançant gràfics dinàmics.",
         "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Postman", "Bootstrap", "DataTables", "MySQL"],
@@ -175,7 +186,7 @@
         "category": "Videojoc",
         "title": "Pescamines",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Implementació clàssica amb lògica de joc i tauler dinàmic.",
-        "tags": ["JavaScript", "HTML5", "CSS3"],
+        "tags": ["Java 21", "Java Swing"],
         "githubUrl": "https://github.com/EduardoDavilaZ",
         "isPrivate": false
       },
@@ -184,7 +195,7 @@
         "category": "Aplicació web",
         "title": "Piano Virtual",
         "description": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt. Teclat interactiu amb reproducció de notes al navegador.",
-        "tags": ["JavaScript", "HTML5", "CSS3", "Web Audio API"],
+        "tags": ["Python", "MediaPipe", "Pygame", "OpenCV", "FLAC Audio"],
         "githubUrl": "https://github.com/EduardoDavilaZ",
         "isPrivate": false
       }

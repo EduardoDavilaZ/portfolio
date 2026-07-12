@@ -177,6 +177,10 @@ button,
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     box-shadow: var(--id-glass-shadow);
+
+    @media (max-width: 767.98px) {
+        padding: .5rem .5rem;
+    }
 }
 
 .project-card {
