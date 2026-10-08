@@ -1,8 +1,8 @@
 {
   "meta": {
-    "homeTitle": "Eduardo | Inici",
-    "aboutTitle": "Eduardo | Sobre mi",
-    "projectsTitle": "Eduardo | Projectes"
+    "homeTitle": "Inici | Eduardo Davila Zevallos | Desenvolupador Full-Stack",
+    "aboutTitle": "Sobre mi | Eduardo Davila Zevallos | Desenvolupador Full-Stack",
+    "projectsTitle": "Projectes | Eduardo Davila Zevallos | Desenvolupador Full-Stack"
   },
   "nav": {
     "home": "Inici",
@@ -96,6 +96,12 @@
     "title": "Trajectòria",
     "items": [
       {
+        "date": "Set. 2026 — Actualitat",
+        "title": "Especialització en Intel·ligència Artificial i Big Data",
+        "company": "I.E.S. Augustóbriga",
+        "description": "Formació especialitzada en models d'intel·ligència artificial, anàlisi massiva de dades, aprenentatge automàtic i processament avançat d'informació. Enfocament pràctic en l'aplicació de la IA en entorns empresarials, integrant models predictius i solucions tecnològiques avançades."
+      },
+      {
         "date": "feb. 2026 — jun. 2026",
         "title": "Pràctiques Professionals",
         "company": "THB Hotels",
@@ -149,9 +155,45 @@
         "slug": "substitutions",
         "category": "Eina de gestió",
         "title": "Sistema de Gestió de Guàrdies",
-        "description": "Automatitza la logística docent i la cobertura d'absències, centralitzant la comunicació entre direcció i professorat.",
+        "description": " Automatitza la logística docent i la cobertura d'absències, centralitzant la comunicació entre direcció i professorat.",
         "tags": ["PHP 8", "MVC", "MySQL", "DataTables", "PHPMailer", "Bootstrap", "jQuery"],
         "githubUrl": "https://github.com/EduardoDavilaZ/substitute-management",
+        "isPrivate": false
+      },
+      {
+        "slug": "environmental",
+        "category": "Eina d'analítiques",
+        "title": "Mòdul Mediambiental (IA)",
+        "description": "Anàlisi de subministraments i residus amb IA per extreure dades de factures i generar informes comparatius.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "slug": "ota",
+        "category": "Eina d'analítiques",
+        "title": "Analítiques de Reserves (OTA)",
+        "description": "Auditoria financera hotelera amb control de mètriques Price-Match i seguiment d'abandonaments de carret.",
+        "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
+      },
+      {
+        "slug": "portfolio",
+        "category": "Desenvolupament Web / SEO",
+        "title": "Portafoli Personal Web",
+        "description": "Portafoli interactiu d'alt rendiment amb suport multi-idioma (i18n), tematització dinàmica (Dark/Light) i optimització SEO orientada al posicionament orgànic.",
+        "tags": ["Astro", "TypeScript", "Bootstrap", "i18n", "Vite", "Dark/Light Mode", "SEO On-Page"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/portfolio",
+        "isPrivate": false
+      },
+      {
+        "slug": "crj",
+        "category": "Plataforma Web / Gestió",
+        "title": "Creu Roja Joventut (Badajoz)",
+        "description": "Portal de captació i inscripció per al voluntariat amb automatització de quadrants setmanals exportables i cercador de recursos pedagògics.",
+        "tags": ["React", "Laravel", "Eloquent", "MySQL", "Bootstrap", "GitHub Actions", "SEO On-Page"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/crj-ext",
         "isPrivate": false
       },
       {
@@ -164,39 +206,21 @@
         "isPrivate": false
       },
       {
-        "slug": "ota",
-        "category": "Eina d'analítiques",
-        "title": "Analítiques de Reserves (OTA)",
-        "description": "Auditoria financera hotelera amb control de mètriques Price-Match i seguiment d'abandonaments de cistella.",
-        "tags": ["Laravel", "DataTables", "JavaScript", "MySQL"],
-        "githubUrl": null,
-        "isPrivate": true
-      },
-      {
-        "slug": "environmental",
-        "category": "Eina d'analítiques",
-        "title": "Mòdul Mediambiental (IA)",
-        "description": "Anàlisi de subministraments i residus amb IA per extreure dades de factures i generar informes comparatius.",
-        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Bootstrap", "DataTables", "MySQL"],
-        "githubUrl": null,
-        "isPrivate": true
-      },
-      {
         "slug": "minesweeper",
         "category": "Videojoc",
-        "title": "Pescamines",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Implementació clàssica amb lògica de joc i tauler dinàmic.",
+        "title": "Bucsamines",
+        "description": "Implementació del clàssic Bucsamines amb generació dinàmica de taulers i lògica completa de joc.",
         "tags": ["Java 21", "Java Swing"],
-        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "githubUrl": "https://github.com/EduardoDavilaZ/minesweeper-java",
         "isPrivate": false
       },
       {
         "slug": "piano",
-        "category": "Aplicació web",
+        "category": "Visió per Computador",
         "title": "Piano Virtual",
-        "description": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt. Teclat interactiu amb reproducció de notes al navegador.",
+        "description": "Piano virtual amb detecció de mans mitjançant MediaPipe i reproducció interactiva de notes musicals.",
         "tags": ["Python", "MediaPipe", "Pygame", "OpenCV", "FLAC Audio"],
-        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "githubUrl": "https://github.com/EduardoDavilaZ/mediapipe-python-labs/tree/main/piano-air-keys",
         "isPrivate": false
       }
     ]

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "homeTitle": "Eduardo | Inicio",
-    "aboutTitle": "Eduardo | Sobre Mí",
-    "projectsTitle": "Eduardo | Proyectos"
+    "homeTitle": "Inicio | Eduardo Davila Zevallos | Desarrollador Full-Stack",
+    "aboutTitle": "Sobre mí | Eduardo Davila Zevallos | Desarrollador Full-Stack",
+    "projectsTitle": "Proyectos | Eduardo Davila Zevallos | Desarrollador Full-Stack"
   },
   "nav": {
     "home": "Inicio",
@@ -96,6 +96,12 @@
     "title": "Trayectoria",
     "items": [
       {
+        "date": "sep. 2026 — actualidad",
+        "title": "Curso de Especialización en Inteligencia Artificial y Big Data",
+        "company": "I.E.S. Augustóbriga",
+        "description": "Formación especializada en modelos de inteligencia artificial, análisis masivo de datos, aprendizaje automático y procesamiento avanzado de información. Enfoque práctico en la aplicación de la IA en entornos empresariales, integrando modelos predictivos y soluciones tecnológicas avanzadas."
+      },
+      {
         "date": "feb. 2026 — jun. 2026",
         "title": "Prácticas Profesionales",
         "company": "THB Hotels",
@@ -155,13 +161,13 @@
         "isPrivate": false
       },
       {
-        "slug": "leafconnect",
-        "category": "Plataforma educativa",
-        "title": "LeafConection",
-        "description": "Plataforma de sostenibilidad con gamificación para fomentar el compromiso ambiental en entornos educativos.",
-        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
-        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
-        "isPrivate": false
+        "slug": "environmental",
+        "category": "Herramienta de analíticas",
+        "title": "Módulo Medioambiental (IA)",
+        "description": "Análisis de suministros y residuos con IA para extraer datos de facturas y generar informes comparativos.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
       },
       {
         "slug": "ota",
@@ -173,13 +179,31 @@
         "isPrivate": true
       },
       {
-        "slug": "environmental",
-        "category": "Herramienta de analíticas",
-        "title": "Módulo Medioambiental (IA)",
-        "description": "Análisis de suministros y residuos con IA para extraer datos de facturas y generar informes comparativos.",
-        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Bootstrap", "DataTables", "MySQL"],
-        "githubUrl": null,
-        "isPrivate": true
+        "slug": "portfolio",
+        "category": "Desarrollo Web / SEO",
+        "title": "Portafolio Personal Web",
+        "description": "Portafolio interactivo de alto rendimiento con soporte multi-idioma (i18n), tematización dinámica (Dark/Light) y optimización SEO orientada al posicionamiento orgánico.",
+        "tags": ["Astro", "TypeScript", "Bootstrap", "i18n", "Vite", "Dark/Light Mode", "SEO On-Page"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/portfolio",
+        "isPrivate": false
+      },
+      {
+        "slug": "crj",
+        "category": "Plataforma Web / Gestión",
+        "title": "Cruz Roja Juventud (Badajoz)",
+        "description": "Portal de captación e inscripción para el voluntariado con automatización de cuadrantes semanales exportables y buscador de recursos pedagógicos.",
+        "tags": ["React", "Laravel", "Eloquent", "MySQL", "Bootstrap", "GitHub Actions", "SEO On-Page"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/crj-ext",
+        "isPrivate": false
+      },
+      {
+        "slug": "leafconnect",
+        "category": "Plataforma educativa",
+        "title": "LeafConection",
+        "description": "Plataforma de sostenibilidad con gamificación para fomentar el compromiso ambiental en entornos educativos.",
+        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
+        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
+        "isPrivate": false
       },
       {
         "slug": "minesweeper",
@@ -187,7 +211,7 @@
         "title": "Buscaminas",
         "description": "Implementación del clásico Buscaminas con generación dinámica de tableros y lógica completa de juego.",
         "tags": ["Java 21", "Java Swing"],
-        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "githubUrl": "https://github.com/EduardoDavilaZ/minesweeper-java",
         "isPrivate": false
       },
       {
@@ -196,7 +220,7 @@
         "title": "Piano Virtual",
         "description": "Piano virtual con detección de manos mediante MediaPipe y reproducción interactiva de notas musicales.",
         "tags": ["Python", "MediaPipe", "Pygame", "OpenCV", "FLAC Audio"],
-        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "githubUrl": "https://github.com/EduardoDavilaZ/mediapipe-python-labs/tree/main/piano-air-keys",
         "isPrivate": false
       }
     ]

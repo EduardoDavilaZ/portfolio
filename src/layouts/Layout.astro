@@ -19,18 +19,23 @@ const t = getTranslations(locale);
 <html lang={locale} data-bs-theme="dark">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="Content-Language" content={locale} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <meta name="description" content="Eduardo Davila Zevallos - Desarrollador Full Stack. Especialista en PHP, Laravel y arquitectura de software. Automatización, IA y gestión de datos." />
         <meta name="author" content="Eduardo Davila Zevallos" />
-        <meta name="keywords" content="Desarrollador Web, PHP, Laravel, Full Stack, Portafolio, Programación" />
+        <meta name="keywords" content="Desarrollador Web, PHP, Laravel, Full Stack, DAW, Portafolio, Programación" />
 
-        <meta property="og:title" content="Eduardo Davila | Full-Stack Developer" />
+        <meta property="og:title" content={title} />
         <meta property="og:description" content="Portfolio profesional de Eduardo Davila. Full-Stack Developer · PHP · Laravel · MySQL · JavaScript." />
         <meta property="og:url" content="https://eduardodavila.es" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://eduardodavila.es/img/og-img.jpg" /> 
 
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content="Eduardo Davila Zevallos - Desarrollador Full Stack." />
+        <meta name="twitter:image" content="https://eduardodavila.es/img/og-img.jpg" />
 
         <link rel="canonical" href="https://eduardodavila.es" />
 

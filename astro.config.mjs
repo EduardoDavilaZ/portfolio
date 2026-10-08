@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 
@@ -8,7 +9,9 @@ export default defineConfig({
         defaultLocale: 'es',
         locales: ['es', 'en', 'fr', 'ca'],
         routing: {
-            prefixDefaultLocale: false // El español será tudominio.com/ y el inglés tudominio.com/en/
+            prefixDefaultLocale: false
         }
-    }
+    },
+    site: 'https://eduardodavila.es',
+    integrations: [sitemap()],
 });

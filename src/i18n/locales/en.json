@@ -1,8 +1,8 @@
 {
   "meta": {
-    "homeTitle": "Eduardo | Home",
-    "aboutTitle": "Eduardo | About Me",
-    "projectsTitle": "Eduardo | Projects"
+    "homeTitle": "Home | Eduardo Davila Zevallos | Full-Stack Developer",
+    "aboutTitle": "About me | Eduardo Davila Zevallos | Full-Stack Developer",
+    "projectsTitle": "Projects | Eduardo Davila Zevallos | Full-Stack Developer"
   },
   "nav": {
     "home": "Home",
@@ -96,6 +96,12 @@
     "title": "Career",
     "items": [
       {
+        "date": "Sept. 2026 — Present",
+        "title": "Specialization in Artificial Intelligence and Big Data",
+        "company": "I.E.S. Augustóbriga",
+        "description": "Specialized training in artificial intelligence models, massive data analysis, machine learning, and advanced information processing. Practical focus on applying AI in business environments, integrating predictive models and advanced technological solutions." 
+      },
+      {
         "date": "Feb 2026 — Jun 2026",
         "title": "Professional Internship",
         "company": "THB Hotels",
@@ -155,13 +161,13 @@
         "isPrivate": false
       },
       {
-        "slug": "leafconnect",
-        "category": "Educational platform",
-        "title": "LeafConection",
-        "description": "Sustainability platform with gamification to encourage environmental engagement in educational settings.",
-        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
-        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
-        "isPrivate": false
+        "slug": "environmental",
+        "category": "Analytics tool",
+        "title": "Environmental Module (AI)",
+        "description": "Supply and waste analysis with AI to extract invoice data and generate comparative reports.",
+        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Bootstrap", "DataTables", "MySQL"],
+        "githubUrl": null,
+        "isPrivate": true
       },
       {
         "slug": "ota",
@@ -173,30 +179,48 @@
         "isPrivate": true
       },
       {
-        "slug": "environmental",
-        "category": "Analytics tool",
-        "title": "Environmental Module (AI)",
-        "description": "Supply and waste analysis with AI to extract invoice data and generate comparative reports.",
-        "tags": ["OpenAI API", "Laravel", "Data Analysis", "Eloquent", "Bootstrap", "DataTables", "MySQL"],
-        "githubUrl": null,
-        "isPrivate": true
+        "slug": "portfolio",
+        "category": "Web Development / SEO",
+        "title": "Personal Web Portfolio",
+        "description": "High-performance interactive portfolio featuring multi-language support (i18n), dynamic theme switching (Dark/Light), and SEO optimization targeted at organic growth.",
+        "tags": ["Astro", "TypeScript", "Bootstrap", "i18n", "Vite", "Dark/Light Mode", "SEO On-Page"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/portfolio",
+        "isPrivate": false
+      },
+      {
+        "slug": "crj",
+        "category": "Web Platform / Management",
+        "title": "Red Cross Youth (Badajoz)",
+        "description": "Volunteer onboarding and recruitment portal featuring automated, exportable weekly schedules and an interactive educational resource finder.",
+        "tags": ["React", "Laravel", "Eloquent", "MySQL", "Bootstrap", "GitHub Actions", "SEO On-Page"],
+        "githubUrl": "https://github.com/EduardoDavilaZ/crj-ext",
+        "isPrivate": false
+      },
+      {
+        "slug": "leafconnect",
+        "category": "Educational platform",
+        "title": "LeafConection",
+        "description": "Sustainability platform with gamification to encourage environmental engagement in educational settings.",
+        "tags": ["PHP", "JavaScript", "MVC", "MySQL"],
+        "githubUrl": "https://github.com/Aitor-Gocerra/proyectoLeafConection",
+        "isPrivate": false
       },
       {
         "slug": "minesweeper",
         "category": "Video game",
         "title": "Minesweeper",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Classic implementation with game logic and dynamic board.",
+        "description": "Classic Minesweeper implementation with dynamic board generation and complete game logic.",
         "tags": ["Java 21", "Java Swing"],
-        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "githubUrl": "https://github.com/EduardoDavilaZ/minesweeper-java",
         "isPrivate": false
       },
       {
         "slug": "piano",
-        "category": "Web application",
+        "category": "Computer Vision",
         "title": "Virtual Piano",
-        "description": "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt. Interactive keyboard with note playback in the browser.",
+        "description": "Virtual piano featuring hand tracking via MediaPipe and interactive musical note playback.",
         "tags": ["Python", "MediaPipe", "Pygame", "OpenCV", "FLAC Audio"],
-        "githubUrl": "https://github.com/EduardoDavilaZ",
+        "githubUrl": "https://github.com/EduardoDavilaZ/mediapipe-python-labs/tree/main/piano-air-keys",
         "isPrivate": false
       }
     ]
