@@ -13,6 +13,5 @@ export default defineConfig({
         }
     },
     site: 'https://eduardodavila.es',
-    base: '/portfolio',
     integrations: [sitemap()],
 });

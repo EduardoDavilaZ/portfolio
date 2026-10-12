@@ -2,9 +2,10 @@ Options -MultiViews -Indexes
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /portfolio/
+  RewriteBase /
 
+  RewriteCond %{REQUEST_URI} !^/portfolio/ [NC]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.html [L]
+  RewriteRule ^(.*)$ /portfolio/$1 [L]
 </IfModule>
