@@ -1,0 +1,33 @@
+name: Deploy Astro Portfolio to IONOS
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Astro Project
+        run: npm run build
+
+      - name: Deploy dist via rsync with Password
+        env:
+          IONOS_HOST: ${{ secrets.IONOS_HOST }}
+          IONOS_USER: ${{ secrets.IONOS_USER }}
+          IONOS_PASSWORD: ${{ secrets.IONOS_PASSWORD }}
+        run: |
+          sudo apt-get install -y sshpass
+          sshpass -p "$IONOS_PASSWORD" rsync -avz -e "ssh -o StrictHostKeyChecking=no -p 22" --delete ./dist/ $IONOS_USER@$IONOS_HOST:./portfolio/

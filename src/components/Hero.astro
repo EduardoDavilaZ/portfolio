@@ -21,18 +21,19 @@ const { t, locale } = Astro.props;
             <div class="hero-photo-mobile">
                 <Image
                     src={profile}
-                    alt="Eduardo Davila"
+                    alt="Eduardo Dávila Zevallos - Desarrollador Full-Stack y Backend"
                     class="hero-photo"
+                    loading="eager"
                 />
             </div>
 
             <p class="hero-description">{t.description}</p>
 
             <div class="hero-social py-2">
-                <a href={contactInfo.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href={contactInfo.linkedin} target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
-                <a href={contactInfo.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href={contactInfo.github} target="_blank" rel="noopener noreferrer me" aria-label="GitHub">
                     <i class="fa-brands fa-github"></i>
                 </a>
                 <a href={`mailto:${contactInfo.email}`} aria-label={t.email}>
